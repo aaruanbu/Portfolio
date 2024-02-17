@@ -41,7 +41,7 @@ export const Portfolio = () => {
                         }}
                     >
                         <Box sx={{ display: "flex", alignItems: "center" }}>
-                            <Skeleton.Image active style={{}} />
+                            <Skeleton.Image active />
                             <Skeleton loading={loading} active>
                                 <Meta
                                     title="Card title"
@@ -57,17 +57,16 @@ export const Portfolio = () => {
                         marginTop: 16,
                         textAlign: "center",
                         display: "flex",
-                        backgroundColor: "black"
+                        backgroundColor: "white"
                     }}
                 >
                     <Box sx={{ display: "flex", alignItems: "center", }}>
-
                         <Image
                             src="https://via.placeholder.com/150"
                             width={100}
                             alt="Naruto"
                         />
-                        <Box sx={{ backgroundColor: "black" }}>
+                        <Box sx={{ backgroundColor: "white" }}>
                             <h3>
                                 A FRONTEND-DEVELOPER
                             </h3>
@@ -79,6 +78,5 @@ export const Portfolio = () => {
             </>
             }
         </Box>
-
     </>)
 }
