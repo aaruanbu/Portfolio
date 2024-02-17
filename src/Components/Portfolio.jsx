@@ -18,7 +18,7 @@ export const Portfolio = () => {
             'i am a Frontend-Developer.',
         content: "A FRONDEND-DEVELOPER", name: "AARU ANBU",
         img: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
-        name: "aaruanbu"
+
     }));
     const { Meta } = Card;
     const IconText = ({ icon, text }) => (
