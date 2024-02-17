@@ -17,7 +17,8 @@ export const Portfolio = () => {
         role:
             'i am a Frontend-Developer.',
         content: "A FRONDEND-DEVELOPER", name: "AARU ANBU",
-        img: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`
+        img: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
+        name: "aaruanbu"
     }));
     const { Meta } = Card;
     const IconText = ({ icon, text }) => (
@@ -31,7 +32,7 @@ export const Portfolio = () => {
         </>
     );
     return (<>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
             {loading ? <>
                 <Box sx={{ display: "flex", alignItems: "center", }}>
                     <Card
@@ -77,6 +78,85 @@ export const Portfolio = () => {
                 </Card>
             </>
             }
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* <Skeleton.Image active /> */}
+                        <Skeleton loading={loading} active>
+                            <Meta
+                                // description="MORE ABOUT ME"
+                                title="MORE ABOUT ME"
+                            />
+                        </Skeleton>
+                    </Box>
+                </Card>
+            </Box >
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* <Skeleton.Image active /> */}
+                        <Skeleton loading={loading} active>
+                            <Meta
+                                // description="MORE ABOUT ME"
+                                title="Projects"
+                            />
+                        </Skeleton>
+                    </Box>
+                </Card>
+            </Box>
+        </Box >
+        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box >
+                        <Box>
+                            {/* <Skeleton.Image active /> */}
+                            <Skeleton loading={loading} active>
+                                <Meta
+                                    // description="MORE ABOUT ME"
+                                    title="Skills I Have"
+                                // name="Aaruanbu"
+                                />
+                            </Skeleton>
+
+                        </Box>
+
+                    </Box>
+                </Card>
+            </Box>
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* <Skeleton.Image active /> */}
+                        <Skeleton loading={loading} active>
+                            <Meta
+                                // description="Projects"
+                                title="Projects"
+                            />
+                        </Skeleton>
+                    </Box>
+                </Card>
+            </Box>
         </Box>
     </>)
 }
