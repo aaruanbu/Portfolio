@@ -6,8 +6,7 @@ import { Routings } from './Components/Routing.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Routings>
-      <App />
-    </Routings>
+    {/* <App /> */}
+    <Routings />
   </React.StrictMode>,
 )
