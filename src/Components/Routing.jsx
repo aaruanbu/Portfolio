@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbars } from "./Nav";
-import { Portfolios } from "./Portfolios";
+import { Home } from "./Portfolios";
 
 export const Routings = () => {
     return (<>
         <BrowserRouter>
             <Navbars />
             <Routes>
-                <Route path="/" element={<Portfolios />}></Route>
+                <Route path="/" element={<Home />}></Route>
             </Routes>
         </BrowserRouter>
     </>)

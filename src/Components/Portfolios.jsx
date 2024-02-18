@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
-export const Portfolios = () => {
+export const Home = () => {
     const [loading, setLoading] = useState(true);
     setTimeout(() => {
         setLoading(false);
