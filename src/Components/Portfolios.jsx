@@ -158,5 +158,6 @@ export const Home = () => {
                 </Card>
             </Box>
         </Box>
+        hello its me i am a developer
     </>)
 }
