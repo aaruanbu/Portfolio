@@ -15,12 +15,12 @@ export const Navbars = () => {
             cName: "nav-links"
         },
         {
-            title: "Services",
+            title: "About",
             url: "#",
             cName: "nav-links"
         },
         {
-            title: "Products",
+            title: "Project",
             url: "#",
             cName: "nav-links"
         },
@@ -44,7 +44,7 @@ export const Navbars = () => {
     return (<>
         <nav className="navbar">
             <h1 className="navbar-logo">
-                React <i className="fab fa-react"></i>
+                PORTFOLIO <i className="fab fa-react"></i>
             </h1>
             <div className="menu-icon" onClick={handleClick}>
                 {active ? <CloseIcon /> : <MenuIcon />}
@@ -60,7 +60,7 @@ export const Navbars = () => {
                     );
                 })}
             </ul>
-            <Buttons>SIGN UP</Buttons>
+            <Buttons>Contact Me</Buttons>
         </nav>
     </>)
 }

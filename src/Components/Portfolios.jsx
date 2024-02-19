@@ -2,12 +2,15 @@
 import { Box } from "@mui/material"
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     setTimeout(() => {
         setLoading(false);
-    }, 3000);
+    }, 1000);
     const listData = Array.from({
         length: 1,
     }).map((_, i) => ({
@@ -31,8 +34,8 @@ export const Home = () => {
             {text}
         </>
     );
-    return (<>
-        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+    return (<div data-aos="fade-down">
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
             {loading ? <>
                 <Box sx={{ display: "flex", alignItems: "center", }}>
                     <Card
@@ -115,7 +118,7 @@ export const Home = () => {
                 </Card>
             </Box>
         </Box >
-        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
             <Box>
                 <Card
                     style={{
@@ -146,18 +149,25 @@ export const Home = () => {
                         marginTop: 19,
                     }}
                 >
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                        {/* <Skeleton.Image active /> */}
+                    <Box >
                         <Skeleton loading={loading} active>
-                            <Meta
-                                // description="Projects"
-                                title="Projects"
-                            />
+                            <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
+                                {/* <Box sx={{ borderRadius: "50px", display: "flex", alignItems: "center", }}> */}
+                                <GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} />
+                                <TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} />
+                                {/* </Box> */}
+                            </Box>
+                            <Box>
+                                <Meta
+                                    // description="Projects"
+                                    title="Profiles"
+                                />
+                            </Box>
                         </Skeleton>
                     </Box>
                 </Card>
             </Box>
         </Box>
         hello its me i am a developer
-    </>)
+    </div>)
 }

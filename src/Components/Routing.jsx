@@ -8,7 +8,7 @@ export const Routings = () => {
         <BrowserRouter>
             <Navbars />
             <Routes>
-                <Route path="/" element={<Home />}></Route>
+                <Route path="Portfolio" element={<Home />}></Route>
             </Routes>
         </BrowserRouter>
     </>)
