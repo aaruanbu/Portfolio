@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 import reactimg from "../assets/react.svg"
-import Myphoto from "./Img/Aaru.JPG"
+import myphoto from "../assets/Aaru.jpg"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     const particlesConfig = {
@@ -108,7 +108,7 @@ export const Home = () => {
         avatar: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
         role: 'i am a Frontend-Developer.',
         content: "A FRONDEND-DEVELOPER", name: "AARU ANBU",
-        img: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
+        img: "../assets/Aaru.jpg",
     }));
 
     const { Meta } = Card;
@@ -148,10 +148,11 @@ export const Home = () => {
                         >
                             <Box sx={{ display: "flex", alignItems: "center", }}>
                                 <Image
-                                    src={Myphoto}
+                                    src={"../assets/Aaru.jpg"}
                                     width={100}
                                     alt="AARU ANBU"
                                 />
+                                <img src={myphoto} />
                                 <Box
                                     // className="animate" 
                                     sx={{ backgroundColor: "white" }}>
