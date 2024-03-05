@@ -239,7 +239,7 @@ export const Home = () => {
                             display: "flex",
                             justifyContent: "center"
                         }}>
-                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
                                 <Image src={htm} width={100} /><h3>HTML</h3>
                             </Box>
                         </Box>
@@ -252,7 +252,7 @@ export const Home = () => {
                             }
                             , display: "flex",
                             justifyContent: "center"
-                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
                                 <Image src={cs} width={50} /><h3>css&SCSS</h3>
                             </Box></Box>
                         <Box sx={{
@@ -264,7 +264,7 @@ export const Home = () => {
                             },
                             display: "flex",
                             justifyContent: "center"
-                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
                                 <Image src={js} width={60} /><h3>JAVASCRIPT</h3>
                             </Box></Box>
                         <Box sx={{
@@ -278,7 +278,7 @@ export const Home = () => {
                             justifyContent: "center"
                         }}>
                             <Box>
-                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
                                     <Image src={rjs} width={70} /><h3>REACTJS</h3>
                                 </Box>
                             </Box>
@@ -294,7 +294,7 @@ export const Home = () => {
                             justifyContent: "center"
                         }}>
                             <Box>
-                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
                                     <Image src={boost} width={80} /><h3>BOOTSTRAP</h3>
                                 </Box>
                             </Box>
@@ -310,7 +310,7 @@ export const Home = () => {
                             justifyContent: "center"
                         }}>
                             <Box>
-                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
                                     <Image src={mti} width={70} /><h3 >MATERIAL-UI</h3>
                                 </Box>
                             </Box>
