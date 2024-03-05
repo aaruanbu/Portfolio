@@ -10,7 +10,7 @@ import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 import reactimg from "../assets/react.svg"
 import { Typography } from "@mui/material"
 import myphoto from "./Img/aaruanbu.png"
-import htm from "./Img/html.png"
+import htm from "./Img/htm.png"
 import cs from "./Img/cs.png"
 import js from "./Img/js.png"
 import rjs from "./Img/rjs.png"
@@ -233,22 +233,22 @@ export const Home = () => {
                             width: {
                                 xs: "100%",
                                 sm: "100%",
-                                md: "100%",
-                                xl: "100%"
+                                md: "25%",
+                                xl: "25%"
                             },
                             display: "flex",
                             justifyContent: "center"
                         }}>
                             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                <Image src={htm} width={100} /><h3>HTML</h3>
+                                <Image src={htm} width={70} /><h3>HTML</h3>
                             </Box>
                         </Box>
                         <Box sx={{
                             width: {
                                 xs: "100%",
                                 sm: "100%",
-                                md: "100%",
-                                xl: "100%"
+                                md: "25%",
+                                xl: "25%"
                             }
                             , display: "flex",
                             justifyContent: "center"
@@ -259,8 +259,8 @@ export const Home = () => {
                             width: {
                                 xs: "100%",
                                 sm: "100%",
-                                md: "100%",
-                                xl: "100%"
+                                md: "25%",
+                                xl: "25%"
                             },
                             display: "flex",
                             justifyContent: "center"
@@ -271,8 +271,8 @@ export const Home = () => {
                             width: {
                                 xs: "100%",
                                 sm: "100%",
-                                md: "100%",
-                                xl: "100%"
+                                md: "25%",
+                                xl: "25%"
                             },
                             display: "flex",
                             justifyContent: "center"
@@ -287,8 +287,8 @@ export const Home = () => {
                             width: {
                                 xs: "100%",
                                 sm: "100%",
-                                md: "100%",
-                                xl: "100%"
+                                md: "25%",
+                                xl: "25%"
                             },
                             display: "flex",
                             justifyContent: "center"
@@ -303,15 +303,15 @@ export const Home = () => {
                             width: {
                                 xs: "100%",
                                 sm: "100%",
-                                md: "100%",
-                                xl: "100%"
+                                md: "25%",
+                                xl: "25%"
                             },
                             display: "flex",
                             justifyContent: "center"
                         }}>
                             <Box>
                                 <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                    <Image src={mti} width={70} /><h3 >MATERIAL-UI</h3>
+                                    <Image src={mti} width={60} /><h3 >MATERIAL-UI</h3>
                                 </Box>
                             </Box>
                         </Box>
