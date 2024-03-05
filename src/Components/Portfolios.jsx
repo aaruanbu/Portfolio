@@ -172,10 +172,10 @@ export const Home = () => {
 
 
             </div>
-            {/* <Particles
-            params={{ particlesConfig }}
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1" }}
-        /> */}
+            <Particles
+                params={{ particlesConfig }}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1" }}
+            />
         </Box>
         <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             {loading ? <Box>
