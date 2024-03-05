@@ -332,14 +332,13 @@ export const Home = () => {
                         {/* <Skeleton.Image active /> */}
                         <Skeleton loading={loading} active>
                             <Meta
-                                // description="MORE ABOUT ME"
                                 title="Projects"
                             />
                         </Skeleton>
                     </Box>
                 </Card>
             </Box>
-        </Box >
+        </Box>
 
         <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
