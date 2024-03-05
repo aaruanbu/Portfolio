@@ -198,7 +198,7 @@ export const Home = () => {
                     <h2 style={{ fontSize: "20px", fontWeight: "800", textAlign: "center" }} title="About Me">About Me</h2>
                     <Typography sx={{ fontSize: "17px", fontWeight: "600", lineHeight: "2", color: "white", backgroundColor: "transparent !important" }}>
                         I Am done my MBA at Einstein College of Engineering.
-                        Intent eith highly dedicated,self-confident and hardworking and with well-developed communication and
+                        Intend with highly dedicated,self-confident and hardworking and with well-developed communication and
                         organizational skills. I am seeking for a position in esteemed organization offering an
                         oppertunitty for growth in the software field.
                     </Typography>
