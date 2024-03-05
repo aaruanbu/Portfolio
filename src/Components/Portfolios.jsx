@@ -8,16 +8,16 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 import reactimg from "../assets/react.svg"
-import myphoto from "../assets/Aaru.jpg"
+import myphoto from "./Img/aaru.jpg"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     const particlesConfig = {
         particles: {
             number: {
-                value: 80,
+                value: 90,
                 density: {
                     enable: true,
-                    value_area: 800,
+                    value_area: 900,
                 },
             },
             color: {
@@ -31,12 +31,12 @@ export const Home = () => {
                 ],
             },
             opacity: {
-                value: 0.8,
+                value: 0.9,
                 random: false,
                 anim: {
                     enable: true,
                     speed: 7,
-                    opacity_min: 0.3,
+                    opacity_min: 0.9,
                     sync: false,
                 },
             },
@@ -46,14 +46,14 @@ export const Home = () => {
             },
             line_linked: {
                 enable: true,
-                distance: 150,
+                distance: 190,
                 color: "#217dff",
-                opacity: 0.4,
-                width: 10,
+                opacity: 0.9,
+                width: 19,
             },
             move: {
                 enable: true,
-                speed: 9,
+                speed: 19,
                 direction: "none",
                 random: false,
                 straight: false,
@@ -61,7 +61,7 @@ export const Home = () => {
                 bounce: true,
                 attract: {
                     enable: true,
-                    rotateX: 600,
+                    rotateX: 900,
                     rotateY: 1200,
                 },
             },
@@ -81,7 +81,7 @@ export const Home = () => {
             },
             modes: {
                 grab: {
-                    distance: 190,
+                    distance: 199,
                     line_linked: {
                         opacity: 1,
                     },
@@ -100,16 +100,16 @@ export const Home = () => {
         }, 1000);
     }, []);
 
-    const listData = Array.from({
-        length: 1,
-    }).map((_, i) => ({
-        href: 'https://ant.design',
-        title: `ant design part ${i + 1}`,
-        avatar: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
-        role: 'i am a Frontend-Developer.',
-        content: "A FRONDEND-DEVELOPER", name: "AARU ANBU",
-        img: "../assets/Aaru.jpg",
-    }));
+    // const listData = Array.from({
+    //     length: 1,
+    // }).map((_, i) => ({
+    //     href: 'https://ant.design',
+    //     title: `ant design part ${i + 1}`,
+    //     avatar: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
+    //     role: 'i am a Frontend-Developer.',
+    //     content: "A FRONDEND-DEVELOPER", name: "AARU ANBU",
+    //     img: "../assets/Aaru.jpg",
+    // }));
 
     const { Meta } = Card;
 
@@ -117,7 +117,7 @@ export const Home = () => {
 
         <Box component="section" id="particles-js" sx={{ position: "relative" }}>
             <div data-aos="fade-down">
-                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", }} >
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }} >
                     {loading ? <>
                         <Box sx={{ display: "flex", alignItems: "center", }}>
                             <Card
@@ -148,15 +148,14 @@ export const Home = () => {
                         >
                             <Box sx={{ display: "flex", alignItems: "center", }}>
                                 <Image
-                                    src={"../assets/Aaru.jpg"}
+                                    src={myphoto}
                                     width={100}
                                     alt="AARU ANBU"
                                 />
-                                <img src={myphoto} />
+
                                 <Box
-                                    // className="animate" 
                                     sx={{ backgroundColor: "white" }}>
-                                    <h2>\AARU ANBU</h2>
+                                    <h2>AARU ANBU</h2>
                                     <h3>
                                         FRONTEND-DEVELOPER
                                     </h3>
