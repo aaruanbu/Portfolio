@@ -8,7 +8,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 import reactimg from "../assets/react.svg"
-import myphoto from "./Img/aaru.jpg"
+import { Typography } from "@mui/material"
+import myphoto from "./Img/aaruanbu.png"
+import htm from "./Img/html.png"
+import cs from "./Img/cs.png"
+import js from "./Img/js.png"
+import rjs from "./Img/rjs.png"
+import mti from "./Img/mti2.png"
+import boost from "./Img/boost3.png"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     const particlesConfig = {
@@ -100,22 +107,12 @@ export const Home = () => {
         }, 1000);
     }, []);
 
-    // const listData = Array.from({
-    //     length: 1,
-    // }).map((_, i) => ({
-    //     href: 'https://ant.design',
-    //     title: `ant design part ${i + 1}`,
-    //     avatar: `https://api.dicebear.com/7.x/miniavs/svg?seed=${i}`,
-    //     role: 'i am a Frontend-Developer.',
-    //     content: "A FRONDEND-DEVELOPER", name: "AARU ANBU",
-    //     img: "../assets/Aaru.jpg",
-    // }));
+
 
     const { Meta } = Card;
 
     return (<>
-
-        <Box component="section" id="particles-js" sx={{ position: "relative" }}>
+        <Box component="section" id="particles-js" sx={{ position: "relative", backgroundColor: "black" }}>
             <div data-aos="fade-down">
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }} >
                     {loading ? <>
@@ -140,26 +137,32 @@ export const Home = () => {
                         <Card
                             style={{
                                 width: 400,
+                                height: 200,
                                 marginTop: 16,
                                 textAlign: "center",
+                                padding: "2%",
                                 display: "flex",
-                                backgroundColor: "white"
+                                backgroundColor: "white",
+                                justifyContent: "space-between",
+                                backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))"
                             }}
                         >
-                            <Box sx={{ display: "flex", alignItems: "center", }}>
-                                <Image
-                                    src={myphoto}
-                                    width={100}
-                                    alt="AARU ANBU"
-                                />
+                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0" }}>
+                                <Box sx={{ display: "flex", alignItems: "center" }} >
+                                    <Image
+                                        src={myphoto}
+                                        width={100}
+                                        alt="AARU ANBU"
+                                    />
+                                </Box>
 
                                 <Box
-                                    sx={{ backgroundColor: "white" }}>
+                                    sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }}>
                                     <h2>AARU ANBU</h2>
                                     <h3>
-                                        FRONTEND-DEVELOPER
+                                        DVELOPER
                                     </h3>
-                                    <h4 style={{ animation: "animate 8s linear infinite" }}>i am a frontend-developer</h4>
+                                    {/* <h4 >i am a developer</h4> */}
                                 </Box>
                             </Box>
                         </Card>
@@ -169,37 +172,44 @@ export const Home = () => {
 
 
             </div>
-            <Particles
-                params={{ particlesConfig }}
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1" }}
-            />
+            {/* <Particles
+            params={{ particlesConfig }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1" }}
+        /> */}
         </Box>
-        <Box component="section">
-            <Box>
+        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+            {loading ? <Box>
                 <Card
                     style={{
-                        width: 250,
-                        marginTop: 19,
+                        width: 300,
+                        // marginTop: 19,
                     }}
                 >
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                        {/* <Skeleton.Image active /> */}
                         <Skeleton loading={loading} active>
                             <Meta
-                                // description="MORE ABOUT ME"
-                                title="MORE ABOUT ME"
+                                title="ABOUT ME"
                             />
                         </Skeleton>
                     </Box>
                 </Card>
-            </Box >
-        </Box>
-        <Box component="section">
-            <Box>
+            </Box > :
+                <Card style={{ margin: "0%", border: "none", backgroundColor: "transparent !important", color: "black", background: "transparent" }}>
+                    <h2 style={{ fontSize: "20px", fontWeight: "800", textAlign: "center" }} title="About Me">About Me</h2>
+                    <Typography sx={{ fontSize: "17px", fontWeight: "600", lineHeight: "2", color: "white", backgroundColor: "transparent !important" }}>
+                        I Am done my MBA at Einstein College of Engineering.
+                        Intent eith highly dedicated,self-confident and hardworking and with well-developed communication and
+                        organizational skills. I am seeking for a position in esteemed organization offering an
+                        oppertunitty for growth in the software field.
+                    </Typography>
+                </Card>}
+        </Box >
+        <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+            {loading ? <Box>
                 <Card
                     style={{
-                        width: 250,
-                        marginTop: 19,
+                        width: 300,
+                        // marginTop: 19,
                     }}
                 >
                     <Box >
@@ -207,9 +217,7 @@ export const Home = () => {
                             {/* <Skeleton.Image active /> */}
                             <Skeleton loading={loading} active>
                                 <Meta
-                                    // description="MORE ABOUT ME"
                                     title="Skills I Have"
-                                // name="Aaruanbu"
                                 />
                             </Skeleton>
 
@@ -217,9 +225,102 @@ export const Home = () => {
 
                     </Box>
                 </Card>
-            </Box>
+            </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <Box>
+                    <h2 style={{ fontWeight: "800", textAlign: "center" }} >Skills I Have</h2>
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", width: "100%", gap: "10px" }}>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                xl: "100%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                <Image src={htm} width={100} /><h3>HTML</h3>
+                            </Box>
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                xl: "100%"
+                            }
+                            , display: "flex",
+                            justifyContent: "center"
+                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                <Image src={cs} width={50} /><h3>css&SCSS</h3>
+                            </Box></Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                xl: "100%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                <Image src={js} width={60} /><h3>JAVASCRIPT</h3>
+                            </Box></Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                xl: "100%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <Box>
+                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                    <Image src={rjs} width={70} /><h3>REACTJS</h3>
+                                </Box>
+                            </Box>
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                xl: "100%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <Box>
+                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                    <Image src={boost} width={80} /><h3>BOOTSTRAP</h3>
+                                </Box>
+                            </Box>
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "100%",
+                                xl: "100%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <Box>
+                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white" }}>
+                                    <Image src={mti} width={70} /><h3 >MATERIAL-UI</h3>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Box>
+            </Box>}
         </Box>
-        <Box component="section">
+
+        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box>
                 <Card
                     style={{
@@ -240,7 +341,7 @@ export const Home = () => {
             </Box>
         </Box >
 
-        <Box component="section">
+        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
 
                 <Box>
@@ -270,7 +371,7 @@ export const Home = () => {
                 </Box>
             </Box>
         </Box>
-        <Box component="section">
+        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
 
         </Box>
     </>);
