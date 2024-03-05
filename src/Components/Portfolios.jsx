@@ -8,63 +8,90 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 import reactimg from "../assets/react.svg"
+import Myphoto from "./Img/Aaru.JPG"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     const particlesConfig = {
-        "particles": {
-            "number": {
-                "value": 8,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
+        particles: {
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800,
+                },
             },
-            "line_linked": {
-                "enable": true
+            color: {
+                value: "#217dff",
             },
-            "move": {
-                "speed": 4,
-                "out_mode": "out"
-            },
-            "shape": {
-                "type": [
-                    "image",
-                    "circle"
+            shape: {
+                type: "image",
+                image: [
+                    { src: "https://www.google.com/url?sa=i&url=https%3A%2F%2Flevelup.gitconnected.com%2Fdisplay-images-in-react-8ff1f5b1cf9a&psig=AOvVaw2OAhrz1GX0HRvdWxVFlIqW&ust=1709109005455000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCICPq6yNy4QDFQAAAAAdAAAAABAE", height: 20, width: 20 },
+                    { src: "https://www.google.com/url?sa=i&url=https%3A%2F%2Flevelup.gitconnected.com%2Fdisplay-images-in-react-8ff1f5b1cf9a&psig=AOvVaw2OAhrz1GX0HRvdWxVFlIqW&ust=1709109005455000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCICPq6yNy4QDFQAAAAAdAAAAABAE", height: 30, width: 30 },
                 ],
-                "image": [
-                    {
-                        "src": reactimg,
-                        "height": 20,
-                        "width": 23
-                    },
-                    {
-                        "src": reactimg,
-                        "height": 100,
-                        "width": 100
-                    },
-                    {
-                        "src": reactimg,
-                        "height": 20,
-                        "width": 20
-                    }
-                ]
             },
-            "color": {
-                "value": "#CCC"
+            opacity: {
+                value: 0.8,
+                random: false,
+                anim: {
+                    enable: true,
+                    speed: 7,
+                    opacity_min: 0.3,
+                    sync: false,
+                },
             },
-            "size": {
-                "value": 30,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 7,
-                    "size_min": 50,
-                    "sync": true
-                }
-            }
+            size: {
+                value: 30,
+                random: true,
+            },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#217dff",
+                opacity: 0.4,
+                width: 10,
+            },
+            move: {
+                enable: true,
+                speed: 9,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: true,
+                attract: {
+                    enable: true,
+                    rotateX: 600,
+                    rotateY: 1200,
+                },
+            },
         },
-        "retina_detect": true
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "grab",
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push",
+                },
+                resize: true,
+            },
+            modes: {
+                grab: {
+                    distance: 190,
+                    line_linked: {
+                        opacity: 1,
+                    },
+                },
+            },
+        },
+        retina_detect: false,
     };
+
+
 
 
     useEffect(() => {
@@ -86,119 +113,136 @@ export const Home = () => {
 
     const { Meta } = Card;
 
-    return (
-        <div data-aos="fade-down">
-            <Particles
-                params={{ particlesConfig }}
-                style={{ position: 'fixed', width: '100%', height: '100%', zIndex: -1 }}
-            />
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-                {loading ? <>
-                    <Box sx={{ display: "flex", alignItems: "center", }}>
+    return (<>
+
+        <Box component="section" id="particles-js" sx={{ position: "relative" }}>
+            <div data-aos="fade-down">
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", }} >
+                    {loading ? <>
+                        <Box sx={{ display: "flex", alignItems: "center", }}>
+                            <Card
+                                style={{
+                                    width: 400,
+                                    marginTop: 16,
+                                }}
+                            >
+                                <Box sx={{ display: "flex", alignItems: "center" }}>
+                                    <Skeleton.Image active />
+                                    <Skeleton loading={loading} active>
+                                        <Meta
+                                            title="Card title"
+                                            description="This is the description"
+                                        />
+                                    </Skeleton>
+                                </Box>
+                            </Card>
+                        </Box></> : <>
                         <Card
                             style={{
                                 width: 400,
                                 marginTop: 16,
+                                textAlign: "center",
+                                display: "flex",
+                                backgroundColor: "white"
                             }}
                         >
-                            <Box sx={{ display: "flex", alignItems: "center" }}>
-                                <Skeleton.Image active />
-                                <Skeleton loading={loading} active>
-                                    <Meta
-                                        title="Card title"
-                                        description="This is the description"
-                                    />
-                                </Skeleton>
+                            <Box sx={{ display: "flex", alignItems: "center", }}>
+                                <Image
+                                    src={Myphoto}
+                                    width={100}
+                                    alt="AARU ANBU"
+                                />
+                                <Box
+                                    // className="animate" 
+                                    sx={{ backgroundColor: "white" }}>
+                                    <h2>\AARU ANBU</h2>
+                                    <h3>
+                                        FRONTEND-DEVELOPER
+                                    </h3>
+                                    <h4 style={{ animation: "animate 8s linear infinite" }}>i am a frontend-developer</h4>
+                                </Box>
                             </Box>
                         </Card>
-                    </Box></> : <>
-                    <Card
-                        style={{
-                            width: 400,
-                            marginTop: 16,
-                            textAlign: "center",
-                            display: "flex",
-                            backgroundColor: "white"
-                        }}
-                    >
-                        <Box sx={{ display: "flex", alignItems: "center", }}>
-                            <Image
-                                src="https://via.placeholder.com/150"
-                                width={100}
-                                alt="Naruto"
+                    </>
+                    }
+                </Box>
+
+
+            </div>
+            <Particles
+                params={{ particlesConfig }}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1" }}
+            />
+        </Box>
+        <Box component="section">
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* <Skeleton.Image active /> */}
+                        <Skeleton loading={loading} active>
+                            <Meta
+                                // description="MORE ABOUT ME"
+                                title="MORE ABOUT ME"
                             />
-                            <Box sx={{ backgroundColor: "white" }}>
-                                <h3>
-                                    A FRONTEND-DEVELOPER
-                                </h3>
-                                <h2>AARU ANBU</h2>
-                                <h4>i am a frontend-developer</h4>
-                            </Box>
-                        </Box>
-                    </Card>
-                </>
-                }
-                <Box>
-                    <Card
-                        style={{
-                            width: 250,
-                            marginTop: 19,
-                        }}
-                    >
-                        <Box sx={{ display: "flex", alignItems: "center" }}>
-                            {/* <Skeleton.Image active /> */}
-                            <Skeleton loading={loading} active>
-                                <Meta
-                                    // description="MORE ABOUT ME"
-                                    title="MORE ABOUT ME"
-                                />
-                            </Skeleton>
-                        </Box>
-                    </Card>
-                </Box >
-                <Box>
-                    <Card
-                        style={{
-                            width: 250,
-                            marginTop: 19,
-                        }}
-                    >
-                        <Box sx={{ display: "flex", alignItems: "center" }}>
-                            {/* <Skeleton.Image active /> */}
-                            <Skeleton loading={loading} active>
-                                <Meta
-                                    // description="MORE ABOUT ME"
-                                    title="Projects"
-                                />
-                            </Skeleton>
-                        </Box>
-                    </Card>
-                </Box>
+                        </Skeleton>
+                    </Box>
+                </Card>
             </Box >
-            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
-                <Box>
-                    <Card
-                        style={{
-                            width: 250,
-                            marginTop: 19,
-                        }}
-                    >
-                        <Box >
-                            <Box>
-                                {/* <Skeleton.Image active /> */}
-                                <Skeleton loading={loading} active>
-                                    <Meta
-                                        // description="MORE ABOUT ME"
-                                        title="Skills I Have"
-                                    // name="Aaruanbu"
-                                    />
-                                </Skeleton>
-
-                            </Box>
+        </Box>
+        <Box component="section">
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box >
+                        <Box>
+                            {/* <Skeleton.Image active /> */}
+                            <Skeleton loading={loading} active>
+                                <Meta
+                                    // description="MORE ABOUT ME"
+                                    title="Skills I Have"
+                                // name="Aaruanbu"
+                                />
+                            </Skeleton>
 
                         </Box>
-                    </Card>
-                </Box>
+
+                    </Box>
+                </Card>
+            </Box>
+        </Box>
+        <Box component="section">
+            <Box>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* <Skeleton.Image active /> */}
+                        <Skeleton loading={loading} active>
+                            <Meta
+                                // description="MORE ABOUT ME"
+                                title="Projects"
+                            />
+                        </Skeleton>
+                    </Box>
+                </Card>
+            </Box>
+        </Box >
+
+        <Box component="section">
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+
                 <Box>
                     <Card
                         style={{
@@ -225,8 +269,11 @@ export const Home = () => {
                     </Card>
                 </Box>
             </Box>
-        </div>
-    );
+        </Box>
+        <Box component="section">
+
+        </Box>
+    </>);
 }
 
 
