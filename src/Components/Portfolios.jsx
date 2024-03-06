@@ -276,17 +276,17 @@ export const Home = () => {
                                     <Box className="flip-card-back">
                                         <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                             <Box sx={{
-                                                width: "103px", height: {
+                                                width: "109px", height: {
                                                     xs: "18px", sm: "19px", md: "20px", xl: "25px"
                                                 }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
                                             }}>
                                                 <Box sx={{
                                                     backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
                                                         xs: "8px", sm: "9px", md: "10px", xl: "11px"
-                                                    }, borderRadius: "2px", width: "80%"
+                                                    }, borderRadius: "2px", width: "95%"
                                                 }}></Box>
-                                                <h5>80%</h5>
                                             </Box>
+                                            <span style={{ padding: "0 10px" }}>95%</span>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -305,11 +305,11 @@ export const Home = () => {
                         }}>
                             <Box
                                 sx={{
-                                    perspective: "1000px", // Adds 3D perspective
+                                    perspective: "1000px",
                                     width: "200px",
                                     height: "70px",
                                 }}
-                                className="flip-card" // Add flip-card class name here
+                                className="flip-card"
                             >
                                 <Box className="flip-card-inner">
                                     <Box className="flip-card-front">
@@ -336,10 +336,10 @@ export const Home = () => {
                                                 <Box sx={{
                                                     backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
                                                         xs: "8px", sm: "9px", md: "10px", xl: "11px"
-                                                    }, borderRadius: "2px", width: "85%"
+                                                    }, borderRadius: "2px", width: "90%"
                                                 }}></Box>
-                                                <h5>85%</h5>
                                             </Box>
+                                            <span style={{ padding: "0 10px" }}>90%</span>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -358,11 +358,11 @@ export const Home = () => {
                         }}>
                             <Box
                                 sx={{
-                                    perspective: "1000px", // Adds 3D perspective
+                                    perspective: "1000px",
                                     width: "200px",
                                     height: "70px",
                                 }}
-                                className="flip-card" // Add flip-card class name here
+                                className="flip-card"
                             >
                                 <Box className="flip-card-inner">
                                     <Box className="flip-card-front">
@@ -382,7 +382,7 @@ export const Home = () => {
                                     <Box className="flip-card-back">
                                         <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                             <Box sx={{
-                                                width: "109px", height: {
+                                                width: "103px", height: {
                                                     xs: "18px", sm: "19px", md: "20px", xl: "25px"
                                                 }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
                                             }}>
@@ -391,8 +391,8 @@ export const Home = () => {
                                                         xs: "8px", sm: "9px", md: "10px", xl: "11px"
                                                     }, borderRadius: "2px", width: "87%"
                                                 }}></Box>
-                                                <h5>87%</h5>
                                             </Box>
+                                            <span style={{ padding: "0 10px" }}>87%</span>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -411,11 +411,11 @@ export const Home = () => {
                         }}>
                             <Box
                                 sx={{
-                                    perspective: "1000px", // Adds 3D perspective
+                                    perspective: "1000px",
                                     width: "200px",
                                     height: "70px",
                                 }}
-                                className="flip-card" // Add flip-card class name here
+                                className="flip-card"
                             >
                                 <Box className="flip-card-inner">
                                     <Box className="flip-card-front">
@@ -435,7 +435,7 @@ export const Home = () => {
                                     <Box className="flip-card-back">
                                         <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                             <Box sx={{
-                                                width: "109px", height: {
+                                                width: "102px", height: {
                                                     xs: "18px", sm: "19px", md: "20px", xl: "25px"
                                                 }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
                                             }}>
@@ -444,8 +444,8 @@ export const Home = () => {
                                                         xs: "8px", sm: "9px", md: "10px", xl: "11px"
                                                     }, borderRadius: "2px", width: "85%"
                                                 }}></Box>
-                                                <h5>85%</h5>
                                             </Box>
+                                            <span style={{ padding: "0 10px" }}>85%</span>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -464,12 +464,11 @@ export const Home = () => {
                         }}>
                             <Box
                                 sx={{
-                                    perspective: "1000px", // Adds 3D perspective
+                                    perspective: "1000px",
                                     width: "200px",
                                     height: "70px",
                                 }}
-                                className="flip-card" // Add flip-card class name here
-                            >
+                                className="flip-card"                            >
                                 <Box className="flip-card-inner">
                                     <Box className="flip-card-front">
                                         <Box
@@ -488,17 +487,17 @@ export const Home = () => {
                                     <Box className="flip-card-back">
                                         <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                             <Box sx={{
-                                                width: "102px", height: {
+                                                width: "100px", height: {
                                                     xs: "18px", sm: "19px", md: "20px", xl: "25px"
                                                 }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
                                             }}>
                                                 <Box sx={{
                                                     backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
                                                         xs: "8px", sm: "9px", md: "10px", xl: "11px"
-                                                    }, borderRadius: "2px", width: "75%"
+                                                    }, borderRadius: "2px", width: "80%"
                                                 }}></Box>
-                                                <h5>75%</h5>
                                             </Box>
+                                            <span style={{ padding: "0 10px" }}>80%</span>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -517,11 +516,11 @@ export const Home = () => {
                         }}>
                             <Box
                                 sx={{
-                                    perspective: "1000px", // Adds 3D perspective
+                                    perspective: "1000px",
                                     width: "200px",
                                     height: "70px",
                                 }}
-                                className="flip-card" // Add flip-card class name here
+                                className="flip-card"
                             >
                                 <Box className="flip-card-inner">
                                     <Box className="flip-card-front">
@@ -550,8 +549,8 @@ export const Home = () => {
                                                         xs: "8px", sm: "9px", md: "10px", xl: "11px"
                                                     }, borderRadius: "2px", width: "85%"
                                                 }}></Box>
-                                                <h5>85%</h5>
                                             </Box>
+                                            <span style={{ padding: "0 10px" }}>85%</span>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -561,7 +560,7 @@ export const Home = () => {
                     </Box>
                 </Box>
             </Box>}
-        </Box>
+        </Box >
 
         <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box>
