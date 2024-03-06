@@ -209,6 +209,15 @@ export const Home = () => {
                         organizational skills. I am seeking for a position in esteemed organization offering an
                         oppertunitty for growth in the software field.
                     </Typography>
+                    <Box sx={{ display: "flex" }}>
+                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                            <Box>
+                                NAME
+                            </Box><Box>:</Box><Box>
+                                AARU ANBU
+                            </Box>
+                        </Box>
+                    </Box>
                 </Card>}
         </Box >
         <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "auto", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
