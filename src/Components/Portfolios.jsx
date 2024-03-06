@@ -39,12 +39,12 @@ export const Home = () => {
             },
             opacity: {
                 value: 0.9,
-                random: false,
+                random: true,
                 anim: {
                     enable: true,
                     speed: 7,
-                    opacity_min: 0.9,
-                    sync: false,
+                    opacity_min: 1,
+                    sync: true,
                 },
             },
             size: {
@@ -56,13 +56,13 @@ export const Home = () => {
                 distance: 190,
                 color: "#217dff",
                 opacity: 0.9,
-                width: 19,
+                width: 30,
             },
             move: {
                 enable: true,
                 speed: 19,
-                direction: "none",
-                random: false,
+                direction: "center",
+                random: true,
                 straight: false,
                 out_mode: "out",
                 bounce: true,
@@ -95,7 +95,7 @@ export const Home = () => {
                 },
             },
         },
-        retina_detect: false,
+        retina_detect: true,
     };
 
 
@@ -112,8 +112,8 @@ export const Home = () => {
     const { Meta } = Card;
 
     return (<>
-        <Box component="section" id="particles-js" sx={{ position: "relative", backgroundColor: "black" }}>
-            <div data-aos="fade-down">
+        <Box component="section" id="particles-js" sx={{ position: "relative", }}>
+            <Box data-aos="fade-down">
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }} >
                     {loading ? <>
                         <Box sx={{ display: "flex", alignItems: "center", }}>
@@ -136,8 +136,6 @@ export const Home = () => {
                         </Box></> : <>
                         <Card
                             style={{
-                                width: 400,
-                                height: 200,
                                 marginTop: 16,
                                 textAlign: "center",
                                 padding: "2%",
@@ -147,11 +145,18 @@ export const Home = () => {
                                 backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))"
                             }}
                         >
-                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0" }}>
+                            <Box sx={{
+                                display: "flex", alignItems: "center", justifyContent: {
+                                    xs: "center",
+                                    sm: "space-between",
+                                    md: "space-between",
+                                    xl: "space-between",
+                                }, flexWrap: "wrap", padding: "0"
+                            }}>
                                 <Box sx={{ display: "flex", alignItems: "center" }} >
                                     <Image
                                         src={myphoto}
-                                        width={100}
+                                        width={"200px"}
                                         alt="AARU ANBU"
                                     />
                                 </Box>
@@ -160,7 +165,7 @@ export const Home = () => {
                                     sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }}>
                                     <h2>AARU ANBU</h2>
                                     <h3>
-                                        DVELOPER
+                                        DEVELOPER
                                     </h3>
                                     {/* <h4 >i am a developer</h4> */}
                                 </Box>
@@ -171,10 +176,12 @@ export const Home = () => {
                 </Box>
 
 
-            </div>
+            </Box>
             <Particles
                 params={{ particlesConfig }}
-                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1" }}
+                style={{
+                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: "-1", backgroundColor: "black"
+                }}
             />
         </Box>
         <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
@@ -204,7 +211,7 @@ export const Home = () => {
                     </Typography>
                 </Card>}
         </Box >
-        <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "auto", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             {loading ? <Box>
                 <Card
                     style={{
@@ -228,7 +235,10 @@ export const Home = () => {
             </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Box>
                     <h2 style={{ fontWeight: "800", textAlign: "center" }} >Skills I Have</h2>
-                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", width: "100%", gap: "10px" }}>
+                    <Box sx={{
+                        display: "flex", alignItems: "center",
+                        justifyContent: "space-between", flexWrap: "wrap", width: "100%", gap: "30px"
+                    }}>
                         <Box sx={{
                             width: {
                                 xs: "100%",
@@ -239,9 +249,49 @@ export const Home = () => {
                             display: "flex",
                             justifyContent: "center"
                         }}>
-                            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                <Image src={htm} width={70} /><h3>HTML</h3>
+                            <Box
+                                sx={{
+                                    perspective: "1000px", // Adds 3D perspective
+                                    width: "200px",
+                                    height: "70px",
+                                }}
+                                className="flip-card" // Add flip-card class name here
+                            >
+                                <Box className="flip-card-inner">
+                                    <Box className="flip-card-front">
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                backgroundColor: "white",
+                                                width: "200px",
+                                            }}
+                                            className="shadows"
+                                        >
+                                            <Image src={htm} width={70} />
+                                            <h3>HTML</h3>
+                                        </Box>
+                                    </Box>
+                                    <Box className="flip-card-back">
+                                        <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+                                            <Box sx={{
+                                                width: "103px", height: {
+                                                    xs: "18px", sm: "19px", md: "20px", xl: "25px"
+                                                }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
+                                            }}>
+                                                <Box sx={{
+                                                    backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
+                                                        xs: "8px", sm: "9px", md: "10px", xl: "11px"
+                                                    }, borderRadius: "2px", width: "80%"
+                                                }}></Box>
+                                                <h5>80%</h5>
+                                            </Box>
+                                        </Box>
+                                    </Box>
+                                </Box>
                             </Box>
+
                         </Box>
                         <Box sx={{
                             width: {
@@ -252,36 +302,49 @@ export const Home = () => {
                             }
                             , display: "flex",
                             justifyContent: "center"
-                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                <Image src={cs} width={50} /><h3>css&SCSS</h3>
-                            </Box></Box>
-                        <Box sx={{
-                            width: {
-                                xs: "100%",
-                                sm: "100%",
-                                md: "25%",
-                                xl: "25%"
-                            },
-                            display: "flex",
-                            justifyContent: "center"
-                        }}><Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                <Image src={js} width={60} /><h3>JAVASCRIPT</h3>
-                            </Box></Box>
-                        <Box sx={{
-                            width: {
-                                xs: "100%",
-                                sm: "100%",
-                                md: "25%",
-                                xl: "25%"
-                            },
-                            display: "flex",
-                            justifyContent: "center"
                         }}>
-                            <Box>
-                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                    <Image src={rjs} width={70} /><h3>REACTJS</h3>
+                            <Box
+                                sx={{
+                                    perspective: "1000px", // Adds 3D perspective
+                                    width: "200px",
+                                    height: "70px",
+                                }}
+                                className="flip-card" // Add flip-card class name here
+                            >
+                                <Box className="flip-card-inner">
+                                    <Box className="flip-card-front">
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                backgroundColor: "white",
+                                                width: "200px",
+                                            }}
+                                            className="shadows"
+                                        >
+                                            <Image src={cs} width={50} /><h3>CSS&SCSS</h3>
+                                        </Box>
+                                    </Box>
+                                    <Box className="flip-card-back">
+                                        <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+                                            <Box sx={{
+                                                width: "105px", height: {
+                                                    xs: "18px", sm: "19px", md: "20px", xl: "25px"
+                                                }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
+                                            }}>
+                                                <Box sx={{
+                                                    backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
+                                                        xs: "8px", sm: "9px", md: "10px", xl: "11px"
+                                                    }, borderRadius: "2px", width: "85%"
+                                                }}></Box>
+                                                <h5>85%</h5>
+                                            </Box>
+                                        </Box>
+                                    </Box>
                                 </Box>
                             </Box>
+
                         </Box>
                         <Box sx={{
                             width: {
@@ -293,11 +356,48 @@ export const Home = () => {
                             display: "flex",
                             justifyContent: "center"
                         }}>
-                            <Box>
-                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                    <Image src={boost} width={80} /><h3>BOOTSTRAP</h3>
+                            <Box
+                                sx={{
+                                    perspective: "1000px", // Adds 3D perspective
+                                    width: "200px",
+                                    height: "70px",
+                                }}
+                                className="flip-card" // Add flip-card class name here
+                            >
+                                <Box className="flip-card-inner">
+                                    <Box className="flip-card-front">
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                backgroundColor: "white",
+                                                width: "200px",
+                                            }}
+                                            className="shadows"
+                                        >
+                                            <Image src={js} width={60} /><h3>JAVASCRIPT</h3>
+                                        </Box>
+                                    </Box>
+                                    <Box className="flip-card-back">
+                                        <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+                                            <Box sx={{
+                                                width: "109px", height: {
+                                                    xs: "18px", sm: "19px", md: "20px", xl: "25px"
+                                                }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
+                                            }}>
+                                                <Box sx={{
+                                                    backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
+                                                        xs: "8px", sm: "9px", md: "10px", xl: "11px"
+                                                    }, borderRadius: "2px", width: "87%"
+                                                }}></Box>
+                                                <h5>87%</h5>
+                                            </Box>
+                                        </Box>
+                                    </Box>
                                 </Box>
                             </Box>
+
                         </Box>
                         <Box sx={{
                             width: {
@@ -309,11 +409,154 @@ export const Home = () => {
                             display: "flex",
                             justifyContent: "center"
                         }}>
-                            <Box>
-                                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "white", width: "200px" }}>
-                                    <Image src={mti} width={60} /><h3 >MATERIAL-UI</h3>
+                            <Box
+                                sx={{
+                                    perspective: "1000px", // Adds 3D perspective
+                                    width: "200px",
+                                    height: "70px",
+                                }}
+                                className="flip-card" // Add flip-card class name here
+                            >
+                                <Box className="flip-card-inner">
+                                    <Box className="flip-card-front">
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                backgroundColor: "white",
+                                                width: "200px",
+                                            }}
+                                            className="shadows"
+                                        >
+                                            <Image src={rjs} width={70} /><h3>REACTJS</h3>
+                                        </Box>
+                                    </Box>
+                                    <Box className="flip-card-back">
+                                        <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+                                            <Box sx={{
+                                                width: "109px", height: {
+                                                    xs: "18px", sm: "19px", md: "20px", xl: "25px"
+                                                }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
+                                            }}>
+                                                <Box sx={{
+                                                    backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
+                                                        xs: "8px", sm: "9px", md: "10px", xl: "11px"
+                                                    }, borderRadius: "2px", width: "85%"
+                                                }}></Box>
+                                                <h5>85%</h5>
+                                            </Box>
+                                        </Box>
+                                    </Box>
                                 </Box>
                             </Box>
+
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "25%",
+                                xl: "25%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <Box
+                                sx={{
+                                    perspective: "1000px", // Adds 3D perspective
+                                    width: "200px",
+                                    height: "70px",
+                                }}
+                                className="flip-card" // Add flip-card class name here
+                            >
+                                <Box className="flip-card-inner">
+                                    <Box className="flip-card-front">
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                backgroundColor: "white",
+                                                width: "200px",
+                                            }}
+                                            className="shadows"
+                                        >
+                                            <Image src={boost} width={80} /><h3>BOOTSTRAP</h3>
+                                        </Box>
+                                    </Box>
+                                    <Box className="flip-card-back">
+                                        <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+                                            <Box sx={{
+                                                width: "102px", height: {
+                                                    xs: "18px", sm: "19px", md: "20px", xl: "25px"
+                                                }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
+                                            }}>
+                                                <Box sx={{
+                                                    backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
+                                                        xs: "8px", sm: "9px", md: "10px", xl: "11px"
+                                                    }, borderRadius: "2px", width: "75%"
+                                                }}></Box>
+                                                <h5>75%</h5>
+                                            </Box>
+                                        </Box>
+                                    </Box>
+                                </Box>
+                            </Box>
+
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "100%",
+                                sm: "100%",
+                                md: "25%",
+                                xl: "25%"
+                            },
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <Box
+                                sx={{
+                                    perspective: "1000px", // Adds 3D perspective
+                                    width: "200px",
+                                    height: "70px",
+                                }}
+                                className="flip-card" // Add flip-card class name here
+                            >
+                                <Box className="flip-card-inner">
+                                    <Box className="flip-card-front">
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                                backgroundColor: "white",
+                                                width: "200px",
+                                            }}
+                                            className="shadows"
+                                        >
+                                            <Image src={mti} width={60} /><h3 >MATERIAL-UI</h3>
+                                        </Box>
+                                    </Box>
+                                    <Box className="flip-card-back">
+                                        <Box className="shadow2" sx={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
+                                            <Box sx={{
+                                                width: "120px", height: {
+                                                    xs: "18px", sm: "19px", md: "20px", xl: "25px"
+                                                }, boxShadow: "0px 0px 5px rgb(101 215 255)", display: "flex", alignItems: "center"
+                                            }}>
+                                                <Box sx={{
+                                                    backgroundImage: "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))", padding: {
+                                                        xs: "8px", sm: "9px", md: "10px", xl: "11px"
+                                                    }, borderRadius: "2px", width: "85%"
+                                                }}></Box>
+                                                <h5>85%</h5>
+                                            </Box>
+                                        </Box>
+                                    </Box>
+                                </Box>
+                            </Box>
+
                         </Box>
                     </Box>
                 </Box>
