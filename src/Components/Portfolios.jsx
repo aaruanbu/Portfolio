@@ -716,8 +716,8 @@ export const Home = () => {
                     </Card>
                 </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
                     <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
-                        <GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} />
-                        <TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} />
+                        <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
+                        <a style={{ textDecoration: "none", color: "white" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
                     </Box></Box>}
             </Box>
         </Box>
