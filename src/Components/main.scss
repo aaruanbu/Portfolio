@@ -260,4 +260,25 @@
   tr td span {
     color: black;
   }
+  .positionrelative {
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  .positionrelative:hover .positionabsolute {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.9s ease-in;
+  }
+  .positionabsolute {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1919b8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
