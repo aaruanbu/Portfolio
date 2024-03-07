@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Particles from 'react-particles-js';
-import { Box } from "@mui/material"
+import { Box } from "@mui/material";
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -98,19 +98,13 @@ export const Home = () => {
         retina_detect: true,
     };
 
-
-
-
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 1000);
     }, []);
 
-
-
     const { Meta } = Card;
-
     return (<>
         <Box component="section" id="particles-js" sx={{ position: "relative", }}>
             <Box data-aos="fade-down">
@@ -167,7 +161,6 @@ export const Home = () => {
                                     <h3>
                                         DEVELOPER
                                     </h3>
-                                    {/* <h4 >i am a developer</h4> */}
                                 </Box>
                             </Box>
                         </Card>
@@ -184,12 +177,11 @@ export const Home = () => {
                 }}
             />
         </Box>
-        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100%", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             {loading ? <Box>
                 <Card
                     style={{
                         width: 300,
-                        // marginTop: 19,
                     }}
                 >
                     <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -201,44 +193,165 @@ export const Home = () => {
                     </Box>
                 </Card>
             </Box > :
-                <Card style={{ margin: "0%", border: "none", backgroundColor: "transparent !important", color: "black", background: "transparent" }}>
-                    <h2 style={{ fontSize: "20px", fontWeight: "800", textAlign: "center" }} title="About Me">About Me</h2>
-                    <Typography sx={{ fontSize: "17px", fontWeight: "600", lineHeight: "2", color: "white", backgroundColor: "transparent !important" }}>
-                        I Am done my MBA at Einstein College of Engineering.
-                        Intend with highly dedicated,self-confident and hardworking and with well-developed communication and
-                        organizational skills. I am seeking for a position in esteemed organization offering an
-                        oppertunitty for growth in the software field.
-                    </Typography>
-                    <Box sx={{ display: "flex" }}>
-                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                            <Box>
-                                NAME
-                            </Box><Box>:</Box><Box>
-                                AARU ANBU
-                            </Box>
+                <Box>
+                    <Card style={{ margin: "0%", border: "none", backgroundColor: "transparent !important", color: "black", background: "transparent" }}>
+                        <h2 style={{ fontSize: "20px", fontWeight: "800", textAlign: "center" }} title="About Me">About Me</h2>
+                        <Typography sx={{ fontSize: "17px", fontWeight: "600", lineHeight: "2", color: "white", backgroundColor: "transparent !important" }}>
+                            I Am done my MBA at Einstein College of Engineering.
+                            Intend with highly dedicated,self-confident and hardworking and with well-developed communication and
+                            organizational skills. I am seeking for a position in esteemed organization offering an
+                            oppertunitty for growth in the software field.
+                        </Typography>
+                    </Card>
+                    <Box sx={{ display: "grid", justifyItems: "center", lineHeight: 2.5, fontFamily: "monospace !important" }}>
+                        <Box sx={{
+                            width: {
+                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
+                            }, fontSize: "16px", fontWeight: "700"
+                            , color: "white", fontFamily: "Public Sans"
+                        }}>
+                            <table>
+                                <tr>
+                                    <td><Box>
+                                        NAME
+                                    </Box></td>
+                                    <td style={{ paddingLeft: "40px" }}>
+                                        <Box sx={{ color: "black" }}>
+                                            <span>: </span>
+                                            AARU ANBU
+                                        </Box></td>
+                                </tr>
+                            </table>
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
+                            }, fontSize: "16px", fontWeight: "700"
+                            , color: "white", fontFamily: "Public Sans", textAlign: "center"
+                        }}>
+                            <table>
+                                <tr>
+                                    <td> <Box>
+                                        PLACE
+                                    </Box>
+                                    </td>
+                                    <td style={{ paddingLeft: "33px" }}>
+                                        <Box sx={{ color: "black" }}>
+                                            <span>: </span>
+                                            Kallurani
+                                        </Box></td>
+                                </tr>
+                            </table>
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
+                            }, fontSize: "20px", fontWeight: "700"
+                            , color: "white", fontFamily: "Public Sans"
+                        }}>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <Box>
+                                            AGE
+                                        </Box>
+                                    </td>
+                                    <td style={{ paddingLeft: "53px" }}>
+                                        <Box sx={{ color: "black" }}>
+                                            <span>: </span>
+                                            23
+                                        </Box>
+                                    </td>
+                                </tr>
+                            </table>
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
+                            }, fontSize: "20px", fontWeight: "700"
+                            , color: "white", fontFamily: "Public Sans"
+                        }}>
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <Box>
+                                            D.O.B
+                                        </Box>
+                                    </td>
+                                    <td style={{ paddingLeft: "41px" }}>
+                                        <Box sx={{ color: "black" }}>
+                                            <span>: </span>
+                                            05/05/2001
+                                        </Box>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </Box>
+                        <Box sx={{
+                            width: {
+                                xs: "79%", sm: "40%", md: "25%", xl: "25%"
+                            }, fontSize: "18px", fontWeight: "700"
+                            , color: "white", fontFamily: "Public Sans"
+                        }}>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <Box>
+                                            CELL
+                                        </Box>
+                                    </td>
+                                    <td style={{ paddingLeft: "50px" }}>
+                                        <Box sx={{ color: "black" }}>
+                                            <span>: </span>
+                                            +91 7530028405
+                                        </Box>
+                                    </td>
+                                </tr>
+                            </table>
+                        </Box>
+                        <Box sx={{
+                            display: "flex", justifyContent: "space-around", width: {
+                                xs: "95%", sm: "40%", md: "40%", xl: "25%"
+                            }, fontSize: "15px", fontWeight: "900"
+                            , color: "white", fontFamily: "Public Sans"
+                        }}>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <Box>
+                                            G-MAIL
+                                        </Box>
+                                    </td>
+                                    <td style={{ paddingLeft: "50px" }}>
+                                        <Box sx={{ color: "black" }}>
+                                            <span>: </span>
+                                            aaruanbu001@gmail.com
+                                        </Box>
+                                    </td>
+                                </tr>
+                            </table>
                         </Box>
                     </Box>
-                </Card>}
+                </Box>
+            }
         </Box >
         <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "auto", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             {loading ? <Box>
                 <Card
                     style={{
                         width: 300,
-                        // marginTop: 19,
                     }}
                 >
                     <Box >
                         <Box>
-                            {/* <Skeleton.Image active /> */}
                             <Skeleton loading={loading} active>
                                 <Meta
                                     title="Skills I Have"
                                 />
                             </Skeleton>
-
                         </Box>
-
                     </Box>
                 </Card>
             </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -260,11 +373,11 @@ export const Home = () => {
                         }}>
                             <Box
                                 sx={{
-                                    perspective: "1000px", // Adds 3D perspective
+                                    perspective: "1000px",
                                     width: "200px",
                                     height: "70px",
                                 }}
-                                className="flip-card" // Add flip-card class name here
+                                className="flip-card"
                             >
                                 <Box className="flip-card-inner">
                                     <Box className="flip-card-front">
@@ -564,7 +677,6 @@ export const Home = () => {
                                     </Box>
                                 </Box>
                             </Box>
-
                         </Box>
                     </Box>
                 </Box>
@@ -580,7 +692,6 @@ export const Home = () => {
                     }}
                 >
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                        {/* <Skeleton.Image active /> */}
                         <Skeleton loading={loading} active>
                             <Meta
                                 title="Projects"
@@ -604,14 +715,11 @@ export const Home = () => {
                         <Box >
                             <Skeleton loading={loading} active>
                                 <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
-                                    {/* <Box sx={{ borderRadius: "50px", display: "flex", alignItems: "center", }}> */}
                                     <GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} />
                                     <TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} />
-                                    {/* </Box> */}
                                 </Box>
                                 <Box>
                                     <Meta
-                                        // description="Projects"
                                         title="Profiles"
                                     />
                                 </Box>

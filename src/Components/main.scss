@@ -251,24 +251,12 @@
     // top: 10px;
   }
 
-  // .shadows {
-  //   height: 70px;
-  //   // position: relative;
-  //   cursor: pointer;
-  // }
-  // .shadow2 {
-  //   // display: none;
-  //   position: apsolute;
-  //   background-color: #fff;
-  //   height: 70px;
-  //   width: 200px;
-  //   top: 10px;
-  // }
-
-  // .shadows:hover {
-  //   box-shadow: 7px 7px 2px #4ad9e4;
-  //   // transform: translatex(10%, -20%);
-  //   transform: scaley(50%);
-  //   transition: transform 0.9 ease-in-out;
-  // }
+  table {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  tr td span {
+    color: black;
+  }
 }
