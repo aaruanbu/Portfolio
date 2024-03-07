@@ -205,138 +205,33 @@ export const Home = () => {
                     </Card>
                     <Box sx={{ display: "grid", justifyItems: "center", lineHeight: 2.5, fontFamily: "monospace !important" }}>
                         <Box sx={{
-                            width: {
-                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
+                            display: "flex", alignItems: "center", justifyContent: "center", width: {
+                                xs: "85%", sm: "40%", md: "25%", xl: "25%"
                             }, fontSize: "16px", fontWeight: "700"
-                            , color: "white", fontFamily: "Public Sans"
-                        }}>
-                            <table>
-                                <tr>
-                                    <td><Box>
-                                        NAME
-                                    </Box></td>
-                                    <td style={{ paddingLeft: "40px" }}>
-                                        <Box sx={{ color: "black" }}>
-                                            <span>: </span>
-                                            AARU ANBU
-                                        </Box></td>
-                                </tr>
-                            </table>
-                        </Box>
-                        <Box sx={{
-                            width: {
-                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
-                            }, fontSize: "16px", fontWeight: "700"
-                            , color: "white", fontFamily: "Public Sans", textAlign: "center"
-                        }}>
-                            <table>
-                                <tr>
-                                    <td> <Box>
-                                        PLACE
-                                    </Box>
-                                    </td>
-                                    <td style={{ paddingLeft: "33px" }}>
-                                        <Box sx={{ color: "black" }}>
-                                            <span>: </span>
-                                            Kallurani
-                                        </Box></td>
-                                </tr>
-                            </table>
-                        </Box>
-                        <Box sx={{
-                            width: {
-                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
-                            }, fontSize: "20px", fontWeight: "700"
-                            , color: "white", fontFamily: "Public Sans"
-                        }}>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <Box>
-                                            AGE
-                                        </Box>
-                                    </td>
-                                    <td style={{ paddingLeft: "53px" }}>
-                                        <Box sx={{ color: "black" }}>
-                                            <span>: </span>
-                                            23
-                                        </Box>
-                                    </td>
-                                </tr>
-                            </table>
-                        </Box>
-                        <Box sx={{
-                            width: {
-                                xs: "75%", sm: "40%", md: "25%", xl: "25%"
-                            }, fontSize: "20px", fontWeight: "700"
-                            , color: "white", fontFamily: "Public Sans"
+                            , color: "white",
                         }}>
 
-                            <table>
-                                <tr>
-                                    <td>
-                                        <Box>
-                                            D.O.B
-                                        </Box>
-                                    </td>
-                                    <td style={{ paddingLeft: "41px" }}>
-                                        <Box sx={{ color: "black" }}>
-                                            <span>: </span>
-                                            05/05/2001
-                                        </Box>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </Box>
-                        <Box sx={{
-                            width: {
-                                xs: "79%", sm: "40%", md: "25%", xl: "25%"
-                            }, fontSize: "18px", fontWeight: "700"
-                            , color: "white", fontFamily: "Public Sans"
-                        }}>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <Box>
-                                            CELL
-                                        </Box>
-                                    </td>
-                                    <td style={{ paddingLeft: "50px" }}>
-                                        <Box sx={{ color: "black" }}>
-                                            <span>: </span>
-                                            +91 7530028405
-                                        </Box>
-                                    </td>
-                                </tr>
-                            </table>
-                        </Box>
-                        <Box sx={{
-                            display: "flex", justifyContent: "space-around", width: {
-                                xs: "95%", sm: "40%", md: "40%", xl: "25%"
-                            }, fontSize: "15px", fontWeight: "900"
-                            , color: "white", fontFamily: "Public Sans"
-                        }}>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <Box>
-                                            G-MAIL
-                                        </Box>
-                                    </td>
-                                    <td style={{ paddingLeft: "50px" }}>
-                                        <Box sx={{ color: "black" }}>
-                                            <span>: </span>
-                                            aaruanbu001@gmail.com
-                                        </Box>
-                                    </td>
-                                </tr>
-                            </table>
+                            <Box sx={{ fontfamily: "monospace" }} >
+                                <p>NAME</p>
+                                <p>PLACE</p>
+                                <p>AGE</p>
+                                <p>D.O.B</p>
+                                <p>CELL</p>
+                                <p>G-MAIL</p>
+                            </Box>
+                            <Box sx={{ paddingLeft: "5%", color: "black", fontWeight: "700" }}>
+                                <p>: AARU ANBU</p>
+                                <p>: Kallurani</p>
+                                <p>: 23</p>
+                                <p>: 20/05/2001</p>
+                                <p>: +91 7530028405</p>
+                                <p>: aaruanbu001@gmail.com</p>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
             }
-        </Box >
+        </Box>
         <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "auto", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             {loading ? <Box>
                 <Card
@@ -359,7 +254,7 @@ export const Home = () => {
                     <h2 style={{ fontWeight: "800", textAlign: "center" }} >Skills I Have</h2>
                     <Box sx={{
                         display: "flex", alignItems: "center",
-                        justifyContent: "space-between", flexWrap: "wrap", width: "100%", gap: "30px"
+                        justifyContent: "space-between", flexWrap: "wrap", width: "100%", gap: "30px", margin: "3% 0"
                     }}>
                         <Box sx={{
                             width: {
@@ -683,7 +578,7 @@ export const Home = () => {
             </Box>}
         </Box >
 
-        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" sx={{ display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             {loading ? <Box>
                 <Card
                     style={{
@@ -699,9 +594,11 @@ export const Home = () => {
                         </Skeleton>
                     </Box>
                 </Card>
-            </Box> :
-                <Box>
-                    <Box className="" sx={{}}>
+            </Box>
+                :
+                <Box sx={{ margin: "3% 0" }}>
+                    <Box className="">
+                        <h1>PROJECTS</h1>
                     </Box>
                 </Box>
             }
