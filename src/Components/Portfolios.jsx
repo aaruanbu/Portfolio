@@ -672,7 +672,7 @@ export const Home = () => {
                                                 xs: "100%",
                                                 sm: "100%",
                                                 md: "100%",
-                                                xl: "100%"
+                                                xl: "100%",
                                             }
                                         }}>
                                             <Box component="img" src={v.img} sx={{
@@ -680,7 +680,7 @@ export const Home = () => {
                                                     xs: "100%",
                                                     sm: "100%",
                                                     md: "100%",
-                                                    xl: "100%"
+                                                    xl: "100%",
                                                 }
                                             }} />
                                         </Box>
