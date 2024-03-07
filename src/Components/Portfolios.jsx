@@ -659,7 +659,7 @@ export const Home = () => {
                                         }, display: "flex", justifyContent: "space-between", flexWrap: "wrap", position: "relative", overflow: "hidden"
                                     }} className="positionrelative">
                                         <Box className="positionabsolute" sx={{ position: "absolute" }}>
-                                            <a href={v.link} title="GO TO THE WEBSITE" style={{ textDecoration: "none", color: "white" }}><MediationIcon /></a>
+                                            <a href={v.link} target='blank' title="GO TO THE WEBSITE" style={{ textDecoration: "none", color: "white" }}><MediationIcon /></a>
                                             <ul style={{ listStyle: "none", paddingLeft: "9px", lineHeight: "1.5" }}>
                                                 <li>{v.usage}</li>
                                                 <li>{v.usage1}</li>
