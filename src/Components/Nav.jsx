@@ -29,11 +29,11 @@ export const Navbars = () => {
             url: "#",
             cName: "nav-links"
         },
-        {
-            title: "Sign up",
-            url: "#",
-            cName: "nav-links-mobile"
-        }
+        // {
+        //     title: "Sign up",
+        //     url: "#",
+        //     cName: "nav-links-mobile"
+        // }
     ];
     const [active, setActive] = useState(false);
 

@@ -598,8 +598,15 @@ export const Home = () => {
                 :
                 <Box sx={{ margin: "3% 0" }}>
                     <Box className="">
-                        <h1>PROJECTS</h1>
+                        <h1>MY PROJECTS</h1>
                     </Box>
+                    <Box><Box>
+
+                    </Box></Box>
+                    <Box><Box></Box></Box>
+                    <Box><Box></Box></Box>
+                    <Box><Box></Box></Box>
+                    <Box><Box></Box></Box>
                 </Box>
             }
         </Box>
