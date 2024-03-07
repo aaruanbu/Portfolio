@@ -701,8 +701,7 @@ export const Home = () => {
                 </Card>
             </Box> :
                 <Box>
-                    <Box>
-
+                    <Box className="" sx={{}}>
                     </Box>
                 </Box>
             }
