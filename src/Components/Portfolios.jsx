@@ -25,7 +25,7 @@ import reactweb from "./Img/reactweb.png"
 import redbus from "./Img/redbus.png"
 import mentor from "./Img/mentor.png"
 import backcolor from "./Img/backcolor.png"
-import resumes from "./Img/aaruanbu-resume.pdf"
+import resumes from "./Img/aaruanbu.pdf"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     const particlesConfig = {
@@ -707,6 +707,7 @@ export const Home = () => {
 
         <Box component="section" sx={{ padding: "0px 20px", display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
+                <h2 style={{ textAlign: "center" }}>My Education</h2>
                 {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                     <Card
                         style={{
@@ -727,14 +728,16 @@ export const Home = () => {
                         </Box>
                     </Card>
                 </Box> : <Box sx={{ width: "100%" }}>
-                    <h2 style={{ textAlign: "center" }}>My Education</h2>
+
 
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <Box sx={{ display: "flex", flexWrap: "wrap", lineHeight: "1.5", justifyContent: "space-between", width: "100%" }}>
                             <Box sx={{
                                 display: "grid", justifyContent: "space-between", width: {
                                     xs: "65%", sm: "65%", md: "30%", xl: "30%"
-                                }, fontWeight: "700"
+                                }, fontWeight: "700", fontSize: {
+                                    xs: "20px", sm: "20px", md: "30px", md: "32px",
+                                }, color: "white"
                             }}>
                                 <Box>
                                     <h4>Frontend Developer Traniee</h4>
@@ -757,6 +760,8 @@ export const Home = () => {
                             <Box sx={{
                                 display: "grid", width: {
                                     xs: "30%", sm: "30%", md: "30%", xl: "30%"
+                                }, fontWeight: "700", fontSize: {
+                                    xs: "20px", sm: "20px", md: "30px", md: "32px"
                                 }
                             }}>
                                 <Box>
@@ -778,7 +783,7 @@ export const Home = () => {
                                 }
                             }}>
                                 <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: "1.5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
-                                    <a href={resumes} style={{ textDecoration: "none", }} >
+                                    <a href={resumes} download={resumes} style={{ textDecoration: "none", }} >
                                         DOWNLOAD CV <BsDownload /></a>
                                 </Box>
                             </Box>
