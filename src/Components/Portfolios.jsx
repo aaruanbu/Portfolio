@@ -707,7 +707,7 @@ export const Home = () => {
 
         <Box component="section" sx={{ padding: "0px 20px", display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
-                {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+                {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                     <Card
                         style={{
                             width: 300,
@@ -726,7 +726,7 @@ export const Home = () => {
                             </Skeleton>
                         </Box>
                     </Card>
-                </Box> : <Box>
+                </Box> : <Box sx={{ width: "100%" }}>
                     <h2 style={{ textAlign: "center" }}>My Education</h2>
 
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -777,7 +777,7 @@ export const Home = () => {
                                     xs: "100%", sm: "100%", md: "20%", xl: "20%", margin: "5% 0"
                                 }
                             }}>
-                                <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: ".5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
+                                <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: "1.5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
                                     <a href={resumes} style={{ textDecoration: "none", }} >
                                         DOWNLOAD CV <BsDownload /></a>
                                 </Box>
