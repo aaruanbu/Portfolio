@@ -5,6 +5,9 @@ import { Box } from "@mui/material";
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MediationIcon from '@mui/icons-material/Mediation';
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineForwardToInbox } from "react-icons/md";
+import { BsTelephoneOutboundFill } from "react-icons/bs";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
@@ -739,19 +742,19 @@ export const Home = () => {
                                     xs: "20px", sm: "20px", md: "30px", md: "32px",
                                 }, color: "white"
                             }}>
-                                <Box>
+                                <Box sx={{ marginBottom: "10%" }}>
                                     <h4>Frontend Developer Traniee</h4>
                                     <h6>Fabevy Institute, Tenkasi</h6>
                                 </Box>
-                                <Box >
+                                <Box sx={{ marginBottom: "10%" }}>
                                     <h4>MBA</h4>
                                     <h6>Einstein College of Engineering,Tirunelveli-12</h6>
                                 </Box>
-                                <Box>
+                                <Box sx={{ marginBottom: "10%" }}>
                                     <h4>BBA</h4>
                                     <h6>Kamaragar Govt Arts College,Surandai</h6>
                                 </Box>
-                                <Box>
+                                <Box sx={{ marginBottom: "10%" }}>
                                     <h4>HSC</h4>
                                     <h6>Govt.Hr.Sec.school,P.K.Valasai</h6>
                                 </Box>
@@ -761,21 +764,22 @@ export const Home = () => {
                                 display: "grid", width: {
                                     xs: "30%", sm: "30%", md: "30%", xl: "30%"
                                 }, fontWeight: "700", fontSize: {
-                                    xs: "20px", sm: "20px", md: "30px", md: "32px"
+                                    xs: "19px", sm: "20px", md: "30px", md: "32px"
                                 }
                             }}>
-                                <Box>
+                                <Box >
                                     <h4>2023</h4>
                                 </Box>
-                                <Box>
+                                <Box sx={{ marginTop: "10%" }}>
                                     <h4>2021-2023</h4>
                                 </Box>
-                                <Box>
+                                <Box sx={{ marginTop: "10%" }}>
                                     <h4>2018-2021</h4>
                                 </Box>
-                                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                                <Box sx={{ marginTop: "10%" }}>
+                                    <h4> 2017-2018</h4>
+
                                 </Box>
-                                <h4>2017-2018</h4>
                             </Box>
                             <Box sx={{
                                 display: "flex", alignItems: "center", justifyContent: "center", width: {
@@ -812,14 +816,55 @@ export const Home = () => {
                         </Skeleton>
                     </Box>
                 </Card>
-            </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
-                <h2>PROFILES</h2>
-                <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
-                    <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
-                    <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
+            </Box> : <Box
+            // sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}
+            >
+                <h2>Contact</h2>
+                <Box>
+                    <Box>
+                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                            <Box sx={{
+                                color: "white", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
+                                border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px", fontWeight: "800"
+                            }}>< CiLocationOn /></Box>
+                            <Box>
+                                <h5>11/45,Nayinar kovil Street,
+                                    <h5>Kallurani,</h5>Pavoorchatram-627808
+                                    ,Tenkasi-Dt.</h5>
+                            </Box>
+                        </Box>
+                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                            <Box sx={{
+                                display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
+                                border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px",
+                                fontWeight: "800", cursor: "pointer"
+                            }}>
+                                <Box sx={{ color: "white", display: "flex" }} component="a" href='mailto:aaruanbu001@gmail.com'><MdOutlineForwardToInbox />
+                                </Box>
+                            </Box>
+                            <Box><Box sx={{ color: "white", }} component="a" href='mailto:aaruanbu001@gmail.com'>aaruanbu001@gmail.com </Box> </Box>
+                        </Box>
+
+                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                            <Box sx={{
+                                display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
+                                border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px",
+                                fontWeight: "800", cursor: "pointer",
+
+                            }}>  <Box sx={{ color: "white", display: "flex" }} component="a" href='tel:+917530028405'><BsTelephoneOutboundFill /> </Box></Box>
+                            <Box><Box component="a" href='tel:+917530028405'>+91 7530028405 </Box> </Box>
+                        </Box>
+                    </Box>
+                    <Box sx={{
+                        display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F",
+                        border: "0.5px solid blue", color: "white", borderRadius: "5px"
+                    }}>
+                        <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
+                        <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
+                    </Box>
                 </Box>
             </Box>}
-        </Box>
+        </Box >
     </>);
 }
 
