@@ -796,7 +796,6 @@ export const Home = () => {
                 >
                     <Box >
                         <Skeleton loading={loading} active>
-
                             <Box>
                                 <Meta
                                     title="Profiles"
