@@ -24,6 +24,7 @@ import reactweb from "./Img/reactweb.png"
 import redbus from "./Img/redbus.png"
 import mentor from "./Img/mentor.png"
 import backcolor from "./Img/backcolor.png"
+import resumes from "./Img/aaruanbu-resume.pdf"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
     const particlesConfig = {
@@ -184,7 +185,6 @@ export const Home = () => {
                                 justifyContent: "space-between",
                                 backgroundColor: "transparent",
                                 border: "none"
-                                // backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))"
                             }}
                         >
                             <Box sx={{
@@ -204,7 +204,6 @@ export const Home = () => {
                                 </Box>
 
                                 <Box
-                                    // sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }} 
                                     className='infint'>
                                     <h1 style={{ color: "white", fontSize: "2rem" }}>AARU ANBU</h1>
                                     <h6 >
@@ -705,8 +704,8 @@ export const Home = () => {
             }
         </Box>
 
-        <Box component="section" sx={{ display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
-            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+        <Box component="section" sx={{ padding: "0px 20px", display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                 {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
                     <Card
                         style={{
@@ -734,7 +733,7 @@ export const Home = () => {
                             <Box sx={{
                                 display: "grid", justifyContent: "space-between", width: {
                                     xs: "65%", sm: "65%", md: "30%", md: "30%"
-                                }
+                                }, fontWeight: "700"
                             }}>
                                 <Box>
                                     <h4>Frontend Developer Traniee</h4>
@@ -742,10 +741,12 @@ export const Home = () => {
                                 </Box>
                                 <Box >
                                     <h4>MBA</h4>
-                                    <h6>Einstein College of Engineering,Tirunelveli-12</h6></Box>
+                                    <h6>Einstein College of Engineering,Tirunelveli-12</h6>
+                                </Box>
                                 <Box>
                                     <h4>BBA</h4>
-                                    <h6>Kamaragar Govt Arts College,Surandai</h6></Box>
+                                    <h6>Kamaragar Govt Arts College,Surandai</h6>
+                                </Box>
                                 <Box>
                                     <h4>HSC</h4>
                                     <h6>Govt.Hr.Sec.school,P.K.Valasai</h6>
@@ -758,23 +759,25 @@ export const Home = () => {
                                 }
                             }}>
                                 <Box>
-                                    <h3>2023</h3>
+                                    <h4>2023</h4>
                                 </Box>
                                 <Box>
-                                    <h3>2021-2023</h3>
+                                    <h4>2021-2023</h4>
                                 </Box>
                                 <Box>
-                                    <h3>2018-2021</h3>
+                                    <h4>2018-2021</h4>
                                 </Box>
                                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                                 </Box>
-                                <h3>2017-2018</h3>
+                                <h4>2017-2018</h4>
                             </Box>
                             <Box sx={{
                                 display: "flex", alignItems: "center", justifyContent: "center", width: {
-                                    xs: "100%", sm: "100%", md: "20%", md: "20%"
+                                    xs: "100%", sm: "100%", md: "20%", md: "20%", margin: "5% 0"
                                 }
-                            }}>download my resume</Box>
+                            }}><Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointe4", padding: ".5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
+                                    <a href={resumes} style={{ textDecoration: "none", }} >
+                                        DOWNLOAD CV</a></Box></Box>
                         </Box>
                     </Box>
                 </Box>
