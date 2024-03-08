@@ -181,7 +181,7 @@ export const Home = () => {
                                 textAlign: "center",
                                 padding: "2%",
                                 display: "flex",
-                                backgroundColor: "white",
+                                // backgroundColor: "white",
                                 justifyContent: "space-between",
                                 backgroundColor: "transparent",
                                 border: "none"
@@ -732,7 +732,7 @@ export const Home = () => {
                         <Box sx={{ display: "flex", flexWrap: "wrap", lineHeight: "1.5", justifyContent: "space-between", width: "100%" }}>
                             <Box sx={{
                                 display: "grid", justifyContent: "space-between", width: {
-                                    xs: "65%", sm: "65%", md: "30%", md: "30%"
+                                    xs: "65%", sm: "65%", md: "30%", xl: "30%"
                                 }, fontWeight: "700"
                             }}>
                                 <Box>
@@ -755,7 +755,7 @@ export const Home = () => {
 
                             <Box sx={{
                                 display: "grid", width: {
-                                    xs: "30%", sm: "30%", md: "30%", md: "30%"
+                                    xs: "30%", sm: "30%", md: "30%", xl: "30%"
                                 }
                             }}>
                                 <Box>
@@ -773,9 +773,10 @@ export const Home = () => {
                             </Box>
                             <Box sx={{
                                 display: "flex", alignItems: "center", justifyContent: "center", width: {
-                                    xs: "100%", sm: "100%", md: "20%", md: "20%", margin: "5% 0"
+                                    xs: "100%", sm: "100%", md: "20%", xl: "20%", margin: "5% 0"
                                 }
-                            }}><Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointe4", padding: ".5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
+                            }}>
+                                <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: ".5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
                                     <a href={resumes} style={{ textDecoration: "none", }} >
                                         DOWNLOAD CV</a></Box></Box>
                         </Box>
