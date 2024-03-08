@@ -278,7 +278,12 @@ export const Home = () => {
                 </Box>
             }
         </Box>
-        <Box component="section" sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "auto", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" sx={{
+            padding: "20px 0", borderTop: "1px solid white", borderBottom: "1px solid white", height: {
+                md: "100vh", xl: "100vh", sm: "auto", xs: "auto"
+            }, display: "flex",
+            alignItems: "center", justifyContent: "center", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))"
+        }}>
             {loading ? <Box>
                 <Card
                     style={{
@@ -695,34 +700,37 @@ export const Home = () => {
 
         <Box component="section" sx={{ display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+                {loading ? <Box>
 
-                {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
-                    <Card
-                        style={{
-                            width: 250,
-                            marginTop: 19,
-                        }}
-                    >
-                        <Box >
-                            <Skeleton loading={loading} active>
+                </Box> : <Box></Box>}
 
-                                <Box>
-                                    <Meta
-                                        title="Profiles"
-                                    />
-                                </Box>
-                            </Skeleton>
-                        </Box>
-                    </Card>
-                </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
-                    <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
-                        <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
-                        <a style={{ textDecoration: "none", color: "white" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
-                    </Box></Box>}
             </Box>
         </Box>
         <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+            {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+                <Card
+                    style={{
+                        width: 250,
+                        marginTop: 19,
+                    }}
+                >
+                    <Box >
+                        <Skeleton loading={loading} active>
 
+                            <Box>
+                                <Meta
+                                    title="Profiles"
+                                />
+                            </Box>
+                        </Skeleton>
+                    </Box>
+                </Card>
+            </Box> : <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+                <h2>PROFILES</h2>
+                <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
+                    <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
+                    <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
+                </Box></Box>}
         </Box>
     </>);
 }
