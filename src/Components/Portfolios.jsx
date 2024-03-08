@@ -8,6 +8,7 @@ import MediationIcon from '@mui/icons-material/Mediation';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
+import { BsDownload } from "react-icons/bs";
 import reactimg from "../assets/react.svg"
 import { Typography } from "@mui/material"
 import myphoto from "./Img/aaruanbu.png"
@@ -778,7 +779,9 @@ export const Home = () => {
                             }}>
                                 <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: ".5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
                                     <a href={resumes} style={{ textDecoration: "none", }} >
-                                        DOWNLOAD CV</a></Box></Box>
+                                        DOWNLOAD CV <BsDownload /></a>
+                                </Box>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
@@ -809,7 +812,8 @@ export const Home = () => {
                 <Box sx={{ display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F", border: "0.5px solid blue", color: "white", borderRadius: "5px" }}>
                     <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
                     <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
-                </Box></Box>}
+                </Box>
+            </Box>}
         </Box>
     </>);
 }
