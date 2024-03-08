@@ -271,4 +271,32 @@
     align-items: center;
     justify-content: center;
   }
+  // .infint {
+  // }
+  .infint h6 {
+    animation: inf 4s ease-in-out infinite;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 1.5rem;
+    // border-right: 2px solid #f3f3f3;
+  }
+  @keyframes inf {
+    0% {
+      width: 0%;
+      border-right: 8px solid white;
+      border-radius: 30px;
+    }
+    30% {
+      width: 100%;
+    }
+    60% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+      border-left: 8px solid white;
+      border-radius: 30px;
+      // height: auto;
+    }
+  }
 }

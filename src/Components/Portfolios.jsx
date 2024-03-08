@@ -202,11 +202,11 @@ export const Home = () => {
                                 </Box>
 
                                 <Box
-                                    sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }}>
-                                    <h2>AARU ANBU</h2>
-                                    <h3>
+                                    sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }} className='infint'>
+                                    <h1 style={{ color: "white", fontSize: "2rem" }}>AARU ANBU</h1>
+                                    <h6 >
                                         DEVELOPER
-                                    </h3>
+                                    </h6>
                                 </Box>
                             </Box>
                         </Card>
