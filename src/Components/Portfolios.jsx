@@ -739,7 +739,7 @@ export const Home = () => {
                                 display: "grid", justifyContent: "space-between", width: {
                                     xs: "65%", sm: "65%", md: "30%", xl: "30%"
                                 }, fontWeight: "700", fontSize: {
-                                    xs: "20px", sm: "20px", md: "30px", md: "32px",
+                                    xs: "20px", sm: "20px", md: "30px", xl: "32px",
                                 }, color: "white"
                             }}>
                                 <Box sx={{ marginBottom: "10%" }}>
@@ -764,7 +764,7 @@ export const Home = () => {
                                 display: "grid", width: {
                                     xs: "30%", sm: "30%", md: "30%", xl: "30%"
                                 }, fontWeight: "700", fontSize: {
-                                    xs: "19px", sm: "20px", md: "30px", md: "32px"
+                                    xs: "19px", sm: "20px", md: "30px", xl: "32px"
                                 }
                             }}>
                                 <Box >
