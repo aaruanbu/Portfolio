@@ -182,7 +182,9 @@ export const Home = () => {
                                 display: "flex",
                                 backgroundColor: "white",
                                 justifyContent: "space-between",
-                                backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))"
+                                backgroundColor: "transparent",
+                                border: "none"
+                                // backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))"
                             }}
                         >
                             <Box sx={{
@@ -202,7 +204,8 @@ export const Home = () => {
                                 </Box>
 
                                 <Box
-                                    sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }} className='infint'>
+                                    // sx={{ backgroundImage: "linear-gradient(352deg, rgb(96, 163, 175), rgb(146, 138, 209))" }} 
+                                    className='infint'>
                                     <h1 style={{ color: "white", fontSize: "2rem" }}>AARU ANBU</h1>
                                     <h6 >
                                         DEVELOPER
@@ -243,7 +246,7 @@ export const Home = () => {
                     <Card style={{ margin: "0%", border: "none", backgroundColor: "transparent !important", color: "black", background: "transparent" }}>
                         <h2 style={{ fontSize: "20px", fontWeight: "800", textAlign: "center" }} title="About Me">About Me</h2>
                         <Typography sx={{ fontSize: "17px", fontWeight: "600", lineHeight: "2", color: "white", backgroundColor: "transparent !important" }}>
-                            I Am done my MBA at Einstein College of Engineering.
+                            I am done my MBA at Einstein College of Engineering.
                             Intend with highly dedicated,self-confident and hardworking and with well-developed communication and
                             organizational skills. I am seeking for a position in esteemed organization offering an
                             oppertunitty for growth in the software field.
@@ -629,7 +632,11 @@ export const Home = () => {
             </Box>}
         </Box >
 
-        <Box component="section" sx={{ display: "flex", justifyContent: "center", height: "auto", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section"
+            sx={{
+                display: "flex", justifyContent: "center", height: "auto",
+                backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))"
+            }}>
             {loading ? <Box>
                 <Card
                     style={{
@@ -649,7 +656,7 @@ export const Home = () => {
                 :
                 <Box sx={{ margin: "3% 0" }}>
                     <Box className="">
-                        <h1>MY PROJECTS</h1>
+                        <h1 style={{ textAlign: "center" }}>MY PROJECTS</h1>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", margin: "0 20px" }}>
                         <Box sx={{ width: "100%", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "60px", }} >
@@ -700,9 +707,78 @@ export const Home = () => {
 
         <Box component="section" sx={{ display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
-                {loading ? <Box>
+                {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
+                    <Card
+                        style={{
+                            width: 300,
+                            marginTop: 19,
+                            display: "flex", alignItems: "center", justifyContent: "center",
+                        }}
+                    >
+                        <Box >
+                            <Skeleton loading={loading} active>
 
-                </Box> : <Box></Box>}
+                                <Box>
+                                    <Meta
+                                        title="Profiles"
+                                    />
+                                </Box>
+                            </Skeleton>
+                        </Box>
+                    </Card>
+                </Box> : <Box>
+                    <h2 style={{ textAlign: "center" }}>My Education</h2>
+
+                    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <Box sx={{ display: "flex", flexWrap: "wrap", lineHeight: "1.5", justifyContent: "space-between", width: "100%" }}>
+                            <Box sx={{
+                                display: "grid", justifyContent: "space-between", width: {
+                                    xs: "65%", sm: "65%", md: "30%", md: "30%"
+                                }
+                            }}>
+                                <Box>
+                                    <h4>Frontend Developer Traniee</h4>
+                                    <h6>Fabevy Institute, Tenkasi</h6>
+                                </Box>
+                                <Box >
+                                    <h4>MBA</h4>
+                                    <h6>Einstein College of Engineering,Tirunelveli-12</h6></Box>
+                                <Box>
+                                    <h4>BBA</h4>
+                                    <h6>Kamaragar Govt Arts College,Surandai</h6></Box>
+                                <Box>
+                                    <h4>HSC</h4>
+                                    <h6>Govt.Hr.Sec.school,P.K.Valasai</h6>
+                                </Box>
+                            </Box>
+
+                            <Box sx={{
+                                display: "grid", width: {
+                                    xs: "30%", sm: "30%", md: "30%", md: "30%"
+                                }
+                            }}>
+                                <Box>
+                                    <h3>2023</h3>
+                                </Box>
+                                <Box>
+                                    <h3>2021-2023</h3>
+                                </Box>
+                                <Box>
+                                    <h3>2018-2021</h3>
+                                </Box>
+                                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                                </Box>
+                                <h3>2017-2018</h3>
+                            </Box>
+                            <Box sx={{
+                                display: "flex", alignItems: "center", justifyContent: "center", width: {
+                                    xs: "100%", sm: "100%", md: "20%", md: "20%"
+                                }
+                            }}>download my resume</Box>
+                        </Box>
+                    </Box>
+                </Box>
+                }
 
             </Box>
         </Box>
