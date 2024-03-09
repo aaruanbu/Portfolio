@@ -31,6 +31,10 @@ import backcolor from "./Img/backcolor.png"
 import resumes from "./Img/aaruanbu.pdf"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
+    const setd = [<TiSocialLinkedinCircular />, <TiSocialLinkedinCircular />, <TiSocialLinkedinCircular />]
+    let s = setd.map((v, i) => {
+        console.log(v)
+    })
     const particlesConfig = {
         particles: {
             number: {
@@ -271,13 +275,13 @@ export const Home = () => {
                                 <p>CELL</p>
                                 <p>G-MAIL</p>
                             </Box>
-                            <Box sx={{ paddingLeft: "5%", color: "black", fontWeight: "700" }}>
+                            <Box sx={{ paddingLeft: "5%", color: "black !important", fontWeight: "700" }}>
                                 <p>: AARU ANBU</p>
                                 <p>: Kallurani</p>
                                 <p>: 23</p>
                                 <p>: 20/05/2001</p>
-                                <p>: +91 7530028405</p>
-                                <p>: aaruanbu001@gmail.com</p>
+                                <Box component="a" sx={{ display: "block", color: "black !important" }} href='tel:+917530028405'>: +91 7530028405</Box>
+                                <Box component="a" sx={{ cursor: "pointer", display: "block", color: "black !important" }} href='mailto:aaruanbu001@gmail.com' >: aaruanbu001@gmail.com</Box>
                             </Box>
                         </Box>
                     </Box>
@@ -734,7 +738,7 @@ export const Home = () => {
 
 
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <Box sx={{ display: "flex", flexWrap: "wrap", lineHeight: "1.5", justifyContent: "space-between", width: "100%" }}>
+                        <Box sx={{ display: "flex", flexWrap: "wrap", lineHeight: "1.5", justifyContent: "space-evenly", width: "100%" }}>
                             <Box sx={{
                                 display: "grid", justifyContent: "space-between", width: {
                                     xs: "65%", sm: "65%", md: "30%", xl: "30%"
@@ -787,7 +791,7 @@ export const Home = () => {
                                 }
                             }}>
                                 <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: "1.5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
-                                    <a href={resumes} download={resumes} style={{ textDecoration: "none", }} >
+                                    <a href={resumes} target="_blank" style={{ textDecoration: "none", color: "black" }} >
                                         DOWNLOAD CV <BsDownload /></a>
                                 </Box>
                             </Box>
@@ -797,74 +801,92 @@ export const Home = () => {
                 }
 
             </Box>
-        </Box>
-        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
-            {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}>
-                <Card
-                    style={{
-                        width: 250,
-                        marginTop: 19,
-                    }}
-                >
-                    <Box >
-                        <Skeleton loading={loading} active>
-                            <Box>
-                                <Meta
-                                    title="Profiles"
-                                />
-                            </Box>
-                        </Skeleton>
-                    </Box>
-                </Card>
-            </Box> : <Box
-            // sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", }}
-            >
-                <h2>Contact</h2>
-                <Box>
-                    <Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                            <Box sx={{
-                                color: "white", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
-                                border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px", fontWeight: "800"
-                            }}>< CiLocationOn /></Box>
-                            <Box>
-                                <h5>11/45,Nayinar kovil Street,
-                                    <h5>Kallurani,</h5>Pavoorchatram-627808
-                                    ,Tenkasi-Dt.</h5>
-                            </Box>
+        </Box >
+        <Box component="section" sx={{ height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+            <h2 style={{ textAlign: "center" }}>Contact</h2>
+            <Box sx={{ display: "flex", alignItems: "center", }}>
+                {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
+                    <Card
+                        style={{
+                            width: 250,
+                            marginTop: 19,
+                        }}
+                    >
+                        <Box >
+                            <Skeleton loading={loading} active>
+                                <Box>
+                                    <Meta
+                                        title="Profiles"
+                                    />
+                                </Box>
+                            </Skeleton>
                         </Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                            <Box sx={{
-                                display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
-                                border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px",
-                                fontWeight: "800", cursor: "pointer"
-                            }}>
-                                <Box sx={{ color: "white", display: "flex" }} component="a" href='mailto:aaruanbu001@gmail.com'><MdOutlineForwardToInbox />
+                    </Card>
+                </Box> : <Box
+                    sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}
+                >
+
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-evenly", width: "100%", flexWrap: "wrap", fontFamily: "monospace !important" }}
+                    >
+                        <Box sx={{
+                            // width: {
+                            //     md: "50%", xl: "50%"
+                            // }, 
+                            // lineHeight: "2"
+                        }}>
+                            <Box title="No Location Available Right Now " sx={{ display: "flex", justifyContent: "space-evenly", paddingBottom: "20px" }}>
+                                <Box sx={{
+                                    color: "white", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
+                                    border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px", fontWeight: "800"
+                                }} className="location">< CiLocationOn /></Box>
+
+                            </Box>
+                            <Box className="mails" title="Contact Through Mail" sx={{ display: "flex", justifyContent: "space-evenly", paddingBottom: "20px" }}>
+                                <Box sx={{
+                                    display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
+                                    border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px",
+                                    fontWeight: "800", cursor: "pointer"
+                                }} >
+                                    <Box sx={{ color: "white", display: "flex" }} component="a" href='mailto:aaruanbu001@gmail.com'><MdOutlineForwardToInbox />
+                                    </Box>
                                 </Box>
                             </Box>
-                            <Box><Box sx={{ color: "white", }} component="a" href='mailto:aaruanbu001@gmail.com'>aaruanbu001@gmail.com </Box> </Box>
+
+                            <Box className="phones" title="Contact Through Phone" sx={{ display: "flex", justifyContent: "space-evenly", paddingBottom: "20px" }}>
+                                <Box sx={{
+                                    display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
+                                    border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px",
+                                    fontWeight: "800", cursor: "pointer",
+
+                                }} >
+                                    <Box sx={{ color: "white", display: "flex" }} component="a" href='tel:+917530028405'><BsTelephoneOutboundFill /> </Box></Box>
+
+                            </Box>
                         </Box>
-
-                        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                            <Box sx={{
-                                display: "flex", justifyContent: "center", alignItems: "center", fontSize: "25px",
-                                border: "1px solid white", borderRadius: "100%", height: "45px", width: "45px",
-                                fontWeight: "800", cursor: "pointer",
-
-                            }}>  <Box sx={{ color: "white", display: "flex" }} component="a" href='tel:+917530028405'><BsTelephoneOutboundFill /> </Box></Box>
-                            <Box><Box component="a" href='tel:+917530028405'>+91 7530028405 </Box> </Box>
+                        <Box sx={{ display: "grid", paddingBottom: "30px", fontSize: "14px", fontWeight: "700" }}>
+                            <Box sx={{ color: "white", paddingBottom: "25px" }}>
+                                <Box>11/45,Nayinar kovil Street,
+                                    <Box>Kallurani,</Box>Pavoorchatram-627808
+                                    ,Tenkasi-Dt.</Box>
+                            </Box>
+                            <Box title="Send Mail" sx={{ paddingBottom: "25px" }}>
+                                <Box sx={{ color: "white", }} component="a" href='mailto:aaruanbu001@gmail.com'>aaruanbu001@gmail.com </Box>
+                            </Box>
+                            <Box title="Call" sx={{ paddingTop: "15px" }}><Box component="a" href='tel:+917530028405'>+91 7530028405 </Box> </Box>
+                        </Box>
+                        <Box sx={{
+                            display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F",
+                            border: "0.5px solid blue", color: "white", borderRadius: "5px", width: {
+                                xs: "100%", sm: "100%", md: "25%", xl: "25%", margin: "0px 10px"
+                            }, justifyContent: "space-evenly"
+                        }}>
+                            <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
+                            <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
                         </Box>
                     </Box>
-                    <Box sx={{
-                        display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F",
-                        border: "0.5px solid blue", color: "white", borderRadius: "5px"
-                    }}>
-                        <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
-                        <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
-                    </Box>
-                </Box>
-            </Box>}
-        </Box >
+                </Box>}
+            </Box >
+        </Box>
     </>);
 }
 
