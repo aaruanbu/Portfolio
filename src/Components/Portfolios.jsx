@@ -791,7 +791,7 @@ export const Home = () => {
                                 }
                             }}>
                                 <Box sx={{ borderRadius: "9px", boxShadow: "0px 0px 5px", cursor: "pointer", padding: "1.5%", backgroundColor: "white", color: "black", fontWeight: "700" }}>
-                                    <a href={resumes} target="_blank" style={{ textDecoration: "none", color: "black" }} >
+                                    <a href={resumes} download={resumes} style={{ textDecoration: "none", color: "black" }} >
                                         DOWNLOAD CV <BsDownload /></a>
                                 </Box>
                             </Box>
@@ -804,7 +804,7 @@ export const Home = () => {
         </Box >
         <Box component="section" sx={{ height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <h2 style={{ textAlign: "center" }}>Contact</h2>
-            <Box sx={{ display: "flex", alignItems: "center", }}>
+            <Box sx={{ display: "flex", alignItems: "center", }} >
                 {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                     <Card
                         style={{
@@ -886,7 +886,7 @@ export const Home = () => {
                     </Box>
                 </Box>}
             </Box >
-        </Box>
+        </Box >
     </>);
 }
 
