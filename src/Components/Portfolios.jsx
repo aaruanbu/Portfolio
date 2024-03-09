@@ -9,7 +9,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineForwardToInbox } from "react-icons/md";
 import { BsTelephoneOutboundFill } from "react-icons/bs";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { CiLinkedin } from "react-icons/ci";
 import { Avatar, List, Skeleton, Card, Switch, Image } from 'antd';
 import { BsDownload } from "react-icons/bs";
 import reactimg from "../assets/react.svg"
@@ -31,10 +31,7 @@ import backcolor from "./Img/backcolor.png"
 import resumes from "./Img/aaruanbu.pdf"
 export const Home = () => {
     const [loading, setLoading] = useState(true);
-    const setd = [<TiSocialLinkedinCircular />, <TiSocialLinkedinCircular />, <TiSocialLinkedinCircular />]
-    let s = setd.map((v, i) => {
-        console.log(v)
-    })
+
     const particlesConfig = {
         particles: {
             number: {
@@ -161,7 +158,7 @@ export const Home = () => {
 
     const { Meta } = Card;
     return (<>
-        <Box component="section" id="particles-js" sx={{ position: "relative", }}>
+        <Box component="section" id="particles-js Portfolio" sx={{ position: "relative", }}>
             <Box data-aos="fade-down">
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }} >
                     {loading ? <>
@@ -233,7 +230,11 @@ export const Home = () => {
                 }}
             />
         </Box>
-        <Box component="section" sx={{ display: "flex", alignItems: "center", height: "100%", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" id="about" sx={{
+            display: "flex", alignItems: "center", height: {
+                xs: "100%", sm: "100%", md: "100vh", xl: "100vh"
+            }, backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))"
+        }}>
             {loading ? <Box>
                 <Card
                     style={{
@@ -288,7 +289,7 @@ export const Home = () => {
                 </Box>
             }
         </Box>
-        <Box component="section" sx={{
+        <Box component="section" id="skills" sx={{
             padding: "20px 0", borderTop: "1px solid white", borderBottom: "1px solid white", height: {
                 md: "100vh", xl: "100vh", sm: "auto", xs: "auto"
             }, display: "flex",
@@ -639,10 +640,11 @@ export const Home = () => {
             </Box>}
         </Box >
 
-        <Box component="section"
+        <Box component="section" id="projects"
             sx={{
-                display: "flex", justifyContent: "center", height: "auto",
+                display: "flex", justifyContent: "center", alignItems: "center", height: "100%",
                 backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))"
+                , borderBottom: "1px solid white"
             }}>
             {loading ? <Box>
                 <Card
@@ -661,12 +663,12 @@ export const Home = () => {
                 </Card>
             </Box>
                 :
-                <Box sx={{ margin: "3% 0" }}>
+                <Box sx={{ margin: "3% 0", display: "grid", justifyContent: "center", alignContent: "center", }}>
                     <Box className="">
                         <h1 style={{ textAlign: "center" }}>MY PROJECTS</h1>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "center", margin: "0 20px" }}>
-                        <Box sx={{ width: "100%", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "60px", }} >
+                        <Box sx={{ width: "100%", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "30px", }} >
                             {
                                 imges?.map((v, i) => {
                                     return <Box key={i} sx={{
@@ -712,7 +714,7 @@ export const Home = () => {
             }
         </Box>
 
-        <Box component="section" sx={{ padding: "0px 20px", display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" id="education" sx={{ padding: "0px 20px", borderBottom: "1px solid white", display: "flex", justifyContent: "center", height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                 <h2 style={{ textAlign: "center" }}>My Education</h2>
                 {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
@@ -802,9 +804,9 @@ export const Home = () => {
 
             </Box>
         </Box >
-        <Box component="section" sx={{ height: "100vh", backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
+        <Box component="section" id="contact" sx={{ backgroundImage: loading ? "linear-gradient(to right, #27282d, #191e1f, rgb(23 5 5))" : "linear-gradient(to right, #3b46c9, #4a83e4, rgb(0 0 0 / 67%))" }}>
             <h2 style={{ textAlign: "center" }}>Contact</h2>
-            <Box sx={{ display: "flex", alignItems: "center", }} >
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", }} >
                 {loading ? <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                     <Card
                         style={{
@@ -812,7 +814,7 @@ export const Home = () => {
                             marginTop: 19,
                         }}
                     >
-                        <Box >
+                        <Box>
                             <Skeleton loading={loading} active>
                                 <Box>
                                     <Meta
@@ -863,7 +865,11 @@ export const Home = () => {
 
                             </Box>
                         </Box>
-                        <Box sx={{ display: "grid", paddingBottom: "30px", fontSize: "14px", fontWeight: "700" }}>
+                        <Box sx={{
+                            display: "grid", paddingBottom: "30px", fontSize: {
+                                xs: "14px", sm: "14px", md: "20px", xl: "20px"
+                            }, fontWeight: "700"
+                        }}>
                             <Box sx={{ color: "white", paddingBottom: "25px" }}>
                                 <Box>11/45,Nayinar kovil Street,
                                     <Box>Kallurani,</Box>Pavoorchatram-627808
@@ -874,14 +880,23 @@ export const Home = () => {
                             </Box>
                             <Box title="Call" sx={{ paddingTop: "15px" }}><Box component="a" href='tel:+917530028405'>+91 7530028405 </Box> </Box>
                         </Box>
-                        <Box sx={{
-                            display: "flex", alignItems: "center", padding: "2%", backgroundColor: "#0F0F0F",
-                            border: "0.5px solid blue", color: "white", borderRadius: "5px", width: {
-                                xs: "100%", sm: "100%", md: "25%", xl: "25%", margin: "0px 10px"
-                            }, justifyContent: "space-evenly"
-                        }}>
-                            <a href='https://github.com/aaruanbu' target='blank' style={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", border: "1px solid white" }} /></a>
-                            <a style={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><TiSocialLinkedinCircular style={{ fontSize: "60px", borderRadius: "50%", }} /></a>
+                        <Box>
+                            <Box className="lasta" sx={{
+                                display: "flex", alignItems: "center", padding: "2%", backgroundColor: "transparent",
+                                color: "white", borderRadius: "5px", margin: "0px 10px"
+                                , justifyContent: "space-evenly"
+                            }}>
+                                <Box>
+                                    <Box component="a" href='https://github.com/aaruanbu' target='blank' sx={{ textDecoration: "none", color: "white", cursor: "pointer" }}><GitHubIcon sx={{ fontSize: "40px", borderRadius: "50%", }} /></Box>
+                                </Box>
+                                <Box>
+                                    <Box component="a" sx={{ textDecoration: "none", color: "white", cursor: "pointer" }} target='blank' href='https://www.linkedin.com/in/aaru-anbu-p-440a63241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'><CiLinkedin style={{ fontSize: "45px", borderRadius: "100%", }} /></Box>
+                                </Box>
+                            </Box>
+                            <Box sx={{ margin: "0px 10px" }}>
+                                <h3 style={{ color: "white" }}>All Rights Reserved and Designed by </h3>
+                                <h3 style={{ color: "white", textAlign: "center" }}>🚀Aaru Anbu</h3>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>}

@@ -11,22 +11,30 @@ export const Navbars = () => {
     const menuItems = [
         {
             title: "Home",
-            url: "#",
+            url: "#Portfolio",
             cName: "nav-links"
         },
         {
             title: "About",
-            url: "#",
+            url: "#about",
             cName: "nav-links"
         },
         {
+            title: "Skills",
+            url: "#skills",
+            cName: "nav-links"
+        }, {
             title: "Project",
-            url: "#",
+            url: "#projects",
             cName: "nav-links"
         },
         {
+            title: "Education",
+            url: "#education",
+            cName: "nav-links"
+        }, {
             title: "Contact",
-            url: "#",
+            url: "#contact",
             cName: "nav-links"
         },
         // {
@@ -60,7 +68,7 @@ export const Navbars = () => {
                     );
                 })}
             </ul>
-            <Buttons>Contact Me</Buttons>
+            {/* <Buttons>Contact Me</Buttons> */}
         </nav>
     </>)
 }

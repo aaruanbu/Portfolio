@@ -50,6 +50,11 @@
     color: #fff;
   }
   .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     background: linear-gradient(
       90deg,
       rgb(110, 94, 254) 0%,
@@ -76,7 +81,7 @@
 
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     gap: 65px;
     list-style: none;
     text-align: center;
@@ -335,5 +340,12 @@
   a:hover {
     color: #000000;
     transition: all 0.5s ease-in;
+  }
+  .lasta a {
+    border-radius: 20px;
+  }
+  .lasta a:hover {
+    transition: all 0.5s ease-in;
+    box-shadow: 0 0 10px black;
   }
 }
