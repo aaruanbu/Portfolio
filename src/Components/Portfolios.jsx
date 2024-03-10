@@ -114,7 +114,8 @@ export const Home = () => {
     let imges = [{
         img: api,
         link: 'https://aaruanbu.github.io/API-fetch/',
-        usage: "REACT"
+        usage: "REACT",
+        usage:"API"
     }, {
         img: calc,
         link: 'https://aaruanbu.github.io/calculater/',
