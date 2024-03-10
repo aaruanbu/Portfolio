@@ -739,7 +739,6 @@ export const Home = () => {
                     </Card>
                 </Box> : <Box sx={{ width: "100%" }}>
 
-
                     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <Box sx={{ display: "flex", flexWrap: "wrap", lineHeight: "1.5", justifyContent: "space-evenly", width: "100%" }}>
                             <Box sx={{
