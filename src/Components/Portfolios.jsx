@@ -115,7 +115,7 @@ export const Home = () => {
         img: api,
         link: 'https://aaruanbu.github.io/API-fetch/',
         usage: "REACT",
-        usage:"API"
+        usage1: "API"
     }, {
         img: calc,
         link: 'https://aaruanbu.github.io/calculater/',
