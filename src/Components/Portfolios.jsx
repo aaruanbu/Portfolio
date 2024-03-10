@@ -783,7 +783,7 @@ export const Home = () => {
                                     <h4>2018-2021</h4>
                                 </Box>
                                 <Box sx={{ marginTop: "10%" }}>
-                                    <h4> 2017-2018</h4>
+                                    <h4> 2016-2018</h4>
 
                                 </Box>
                             </Box>
